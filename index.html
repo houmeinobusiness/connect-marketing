@@ -3,323 +3,841 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect Marketing | 課題解決輸出 ＆ 次世代AI自律駆動（AX）総合商社</title>
-  <meta name="description" content="課題先進国・日本の現場AX（AI業務変革）を世界へ輸出する。自社3大自律システム（Alpha/Beta/Gamma）とフィジカルAI・ブロックチェーン決済プロトコルによる次世代コングロマリット。">
+  <title>Connect Marketing | 次世代AI自律駆動型総合商社 / AXアーキテクト</title>
+  <meta name="description" content="課題先進国・日本の現場AXを世界へ輸出する、次世代AI自律駆動型総合商社。2029年プライベートHD化から全産業フィジカルAI×ブロックチェーン自律コングロマリットへ。">
   
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             brand: {
-              bg: '#060B13',
-              card: '#0D1522',
-              cardBorder: 'rgba(255, 255, 255, 0.08)',
-              accent: '#10B981', // Emerald
-              accentHover: '#059669',
+              bg: '#05080E',
+              surface: '#0A0F1D',
+              card: 'rgba(13, 20, 36, 0.65)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              emerald: '#10B981',
+              emeraldGlow: '#059669',
               gold: '#D4AF37',
-              textMuted: '#94A3B8'
+              goldAccent: '#F59E0B',
+              slate: '#94A3B8',
+              cyan: '#06B6D4'
             }
           },
           fontFamily: {
-            sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
-            serif: ['"Shippori Mincho"', 'serif'],
+            sans: ['"Noto Sans JP"', 'Inter', 'sans-serif'],
+            mincho: ['"Shippori Mincho"', 'serif'],
+            mono: ['"JetBrains Mono"', '"Space Grotesk"', 'monospace']
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'spin-slow': 'spin 12s linear infinite',
+            'glow-line': 'glowLine 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            glowLine: {
+              '0%': { opacity: '0.3', transform: 'scaleX(0.95)' },
+              '100%': { opacity: '1', transform: 'scaleX(1.05)' }
+            }
           }
         }
       }
     }
   </script>
-  
+
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
-      background-color: #060B13;
-      color: #F8FAFC;
-      font-family: 'Noto Sans JP', sans-serif;
-    }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), transparent 70%),
-                  radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08), transparent 60%);
+      background-color: #05080E;
+      color: #F1F5F9;
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      overflow-x: hidden;
     }
     .glass-card {
-      background: rgba(13, 21, 34, 0.75);
+      background: rgba(13, 20, 36, 0.65);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .glass-card-hover:hover {
+    .glass-card:hover {
       border-color: rgba(16, 185, 129, 0.4);
-      transform: translateY(-4px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+      transform: translateY(-2px);
     }
+    .glass-card-gold:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.18);
+      transform: translateY(-2px);
+    }
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .radial-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(5, 8, 14, 0) 70%);
+    }
+    .radial-glow-gold {
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, rgba(5, 8, 14, 0) 70%);
+    }
+    .text-gradient-emerald {
+      background: linear-gradient(135deg, #FFFFFF 20%, #A7F3D0 60%, #10B981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #FFFBEB 20%, #FDE68A 60%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .code-tag {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.02em;
+    }
+    /* Hide English by default, toggled via JS */
+    .lang-en { display: none; }
+    body.en-mode .lang-ja { display: none !important; }
+    body.en-mode .lang-en { display: inline-block !important; }
+    body.en-mode .lang-en-block { display: block !important; }
+    body.en-mode .lang-en-flex { display: flex !important; }
+    body.en-mode .lang-en-grid { display: grid !important; }
   </style>
 </head>
-<body class="selection:bg-brand-accent selection:text-black">
+<body class="bg-brand-bg text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
 
-  <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all">
-    <div class="flex items-center space-x-3">
-      <a href="#" class="text-xl md:text-2xl font-bold tracking-widest font-serif text-white flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent animate-pulse"></span>
-        CONNECT MARKETING
+  <!-- Background Ambient Glow & Grid -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] radial-glow pointer-events-none z-0"></div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-brand-bg/80 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-slate-900 flex items-center justify-center p-[1px] border border-emerald-500/40 group-hover:border-emerald-400 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+          <div class="w-full h-full bg-brand-surface rounded-[7px] flex items-center justify-center">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-mono text-base font-extrabold tracking-wider text-white group-hover:text-emerald-400 transition-colors">
+            CONNECT MARKETING
+          </span>
+          <span class="font-mono text-[9px] tracking-widest text-emerald-400/80 uppercase">Autonomous AX Conglomerate</span>
+        </div>
       </a>
-    </div>
-    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-textMuted">
-      <a href="#philosophy" class="hover:text-white transition">理念（課題解決輸出）</a>
-      <a href="#systems" class="hover:text-white transition">3大自律システム</a>
-      <a href="#vision" class="hover:text-white transition">2030ビジョン</a>
-      <a href="#architect" class="hover:text-white transition">アーキテクト</a>
-      <a href="#contact" class="hover:text-white transition">提携・相談</a>
-    </nav>
-    <div class="flex items-center space-x-4">
-      <a href="./en/" class="text-xs font-mono px-3 py-1.5 rounded border border-white/20 text-white hover:border-brand-accent transition">
-        EN ➔
-      </a>
-      <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs md:text-sm px-5 py-2.5 rounded-full shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-105">
-        お問い合わせ
-      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono text-slate-400 tracking-wider">
+        <a href="#philosophy" class="hover:text-emerald-400 transition-colors">
+          <span class="lang-ja">01 // 輸出構想</span>
+          <span class="lang-en">01 // PHILOSOPHY</span>
+        </a>
+        <a href="#engines" class="hover:text-emerald-400 transition-colors">
+          <span class="lang-ja">02 // 3大自律OS</span>
+          <span class="lang-en">02 // 3 CORE ENGINES</span>
+        </a>
+        <a href="#future" class="hover:text-emerald-400 transition-colors">
+          <span class="lang-ja">03 // 2030+ 自律経済圏</span>
+          <span class="lang-en">03 // 2030+ AUTONOMOUS PROTOCOL</span>
+        </a>
+        <a href="#architect" class="hover:text-emerald-400 transition-colors">
+          <span class="lang-ja">04 // アーキテクト</span>
+          <span class="lang-en">04 // ARCHITECT</span>
+        </a>
+        <a href="#roadmap" class="hover:text-emerald-400 transition-colors">
+          <span class="lang-ja">05 // ロードマップ</span>
+          <span class="lang-en">05 // ROADMAP</span>
+        </a>
+      </nav>
+
+      <!-- Right Action / Language Switcher -->
+      <div class="flex items-center gap-4">
+        <!-- Bilingual Switcher -->
+        <button id="langToggle" onclick="toggleLanguage()" class="px-3 py-1.5 rounded-full border border-brand-border bg-brand-surface/80 hover:border-emerald-500/50 text-xs font-mono text-slate-300 hover:text-emerald-400 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-globe text-emerald-400"></i>
+          <span id="langLabel" class="font-bold">JP / EN</span>
+        </button>
+
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-brand-bg font-bold text-xs font-mono tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]">
+          <span class="lang-ja">アライアンス相談</span>
+          <span class="lang-en">INITIATE ALLIANCE</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
     </div>
   </header>
 
-  <section class="relative pt-36 pb-20 md:pt-48 md:pb-36 px-6 hero-glow overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-brand-accent/30 text-brand-accent text-xs md:text-sm font-medium mb-8">
-        <i class="fas fa-shield-halved"></i>
-        <span>Autonomous Business Transformation & Global Trade OS</span>
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 md:pt-36 md:pb-32 px-6 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 font-mono text-xs mb-8 backdrop-blur-md">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="lang-ja">2029年無借金プライベートHD化 ➔ 2030+ 全産業フィジカルAI×ブロックチェーン経済圏</span>
+        <span class="lang-en">2029 Target: Zero-Debt Private HD ➔ 2030+: Physical AI & Blockchain Conglomerate</span>
       </div>
-      
-      <h1 class="text-3xl md:text-6xl font-bold tracking-tight leading-tight md:leading-snug mb-8 font-serif">
-        労働集約の終焉。<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-brand-accent">
-          現場AXから、世界の課題解決へ。
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 max-w-5xl">
+        <span class="lang-ja font-mincho block text-gradient-emerald">労働集約の終焉。</span>
+        <span class="lang-ja font-sans text-slate-100 block mt-2 text-2xl sm:text-4xl lg:text-5xl font-bold">
+          日本の現場AXを、世界の課題解決エンジンへ。
+        </span>
+
+        <span class="lang-en block text-gradient-emerald font-sans">The End of Labor Intensity.</span>
+        <span class="lang-en block text-slate-100 mt-2 text-2xl sm:text-4xl lg:text-5xl font-bold font-sans">
+          Exporting Japan's Battle-Tested AX to Solve Global Crisis.
         </span>
       </h1>
-      
-      <p class="text-base md:text-xl text-brand-textMuted max-w-3xl mx-auto mb-12 leading-relaxed">
-        日本は世界最速で人口減少と人手不足に直面する「極限の課題先進国」。<br class="hidden md:inline">
-        過酷な国内現場で鍛え上げた自社AXシステムとインテントデータ基盤を武器に、世界のサプライチェーンを自律化する次世代型AI総合商社。
+
+      <!-- Subheadline -->
+      <p class="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed mb-10 font-normal">
+        <span class="lang-ja">
+          Connect Marketingは、単なる受託制作やAIツール販売会社ではありません。世界最速で超少子高齢化・人手不足に直面する「課題先進国・日本」の極限現場で磨き抜いたAI自律自動化OSを武器に、世界市場へ高付加価値ソリューションをドル建て直販する「次世代AI自律駆動型総合商社」です。
+        </span>
+        <span class="lang-en">
+          Connect Marketing is not a conventional agency or AI software reseller. We are a next-generation autonomous trading conglomerate and AX architect—exporting mission-critical, battle-tested autonomous operating systems from Japan to human-capital-constrained global enterprises in USD.
+        </span>
       </p>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">80%+</div>
-          <div class="text-xs text-brand-textMuted">現場定型工数削減率</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">Zero-Code</div>
-          <div class="text-xs text-brand-textMuted">論理設計アーキテクチャ</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">USD-Yield</div>
-          <div class="text-xs text-brand-textMuted">外貨獲得＆為替アービトラージ</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">2029 HD</div>
-          <div class="text-xs text-brand-textMuted">無借金プライベートHD化必達</div>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#systems" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold px-8 py-4 rounded-full shadow-lg shadow-brand-accent/25 transition-all transform hover:scale-105">
-          3大自律システムを見る
+      <!-- CTA Row -->
+      <div class="flex flex-wrap items-center gap-4 mb-16">
+        <a href="#engines" class="px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-brand-bg font-bold font-mono text-sm tracking-wide transition-all shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:scale-[1.02]">
+          <span class="lang-ja"><i class="fa-solid fa-microchip mr-2"></i>3大自律OSの全貌を見る</span>
+          <span class="lang-en"><i class="fa-solid fa-microchip mr-2"></i>Explore 3 Core Engines</span>
         </a>
-        <a href="#philosophy" class="glass-card hover:bg-white/10 text-white font-medium px-8 py-4 rounded-full transition-all">
-          課題解決輸出構想とは
+        <a href="#contact" class="px-6 py-3.5 rounded-lg border border-brand-border hover:border-slate-400 bg-brand-surface/60 backdrop-blur-md text-slate-200 font-mono text-sm tracking-wide transition-all hover:bg-brand-surface">
+          <span class="lang-ja"><i class="fa-solid fa-file-contract mr-2"></i>アライアンス・現場AX導入相談</span>
+          <span class="lang-en"><i class="fa-solid fa-file-contract mr-2"></i>Enterprise Inquiries</span>
         </a>
       </div>
+
+      <!-- 4 Key Value Metric Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass-card p-5 rounded-xl border border-brand-border">
+          <div class="font-mono text-xs text-emerald-400 font-bold mb-1">// EFFICIENCY</div>
+          <div class="text-3xl font-extrabold font-mono text-white mb-1">80<span class="text-emerald-400">%+</span></div>
+          <div class="text-xs text-slate-400 leading-tight">
+            <span class="lang-ja">現場実務・定型工数削減</span>
+            <span class="lang-en">Operational Workload Cut</span>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border border-brand-border">
+          <div class="font-mono text-xs text-emerald-400 font-bold mb-1">// ARCHITECTURE</div>
+          <div class="text-3xl font-extrabold font-mono text-white mb-1">Zero<span class="text-emerald-400 font-sans text-xl"> コード</span></div>
+          <div class="text-xs text-slate-400 leading-tight">
+            <span class="lang-ja">AI×ノーコード自律統合統制</span>
+            <span class="lang-en">Autonomous AI Orchestration</span>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border border-brand-border">
+          <div class="font-mono text-xs text-emerald-400 font-bold mb-1">// GLOBAL ARBITRAGE</div>
+          <div class="text-3xl font-extrabold font-mono text-white mb-1">USD<span class="text-emerald-400 font-sans text-xl"> 直販</span></div>
+          <div class="text-xs text-slate-400 leading-tight">
+            <span class="lang-ja">ドル建て獲得＆為替差益還元</span>
+            <span class="lang-en">USD Inflow & Direct Trade</span>
+          </div>
+        </div>
+
+        <div class="glass-card glass-card-gold p-5 rounded-xl border border-brand-border">
+          <div class="font-mono text-xs text-brand-gold font-bold mb-1">// HORIZON 2029</div>
+          <div class="text-3xl font-extrabold font-mono text-gradient-gold mb-1">30<span class="text-brand-gold text-xl">億円+</span></div>
+          <div class="text-xs text-slate-400 leading-tight">
+            <span class="lang-ja">無借金プライベートHD化</span>
+            <span class="lang-en">Zero-Debt Private HD Scale</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="philosophy" class="py-24 px-6 border-t border-white/5 relative">
+  <!-- Section 01: Philosophy (課題解決輸出構想) -->
+  <section id="philosophy" class="py-24 px-6 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xs text-emerald-400 font-bold tracking-widest uppercase">// 01 PHILOSOPHY & GRAND DESIGN</span>
+        <div class="h-[1px] w-12 bg-emerald-500/40"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-4xl font-extrabold leading-snug mb-6 font-mincho text-slate-100">
+            <span class="lang-ja">「課題先進国・日本」の現場ペインは、<br><span class="text-gradient-emerald">世界最強の輸出品</span>へ昇華する。</span>
+            <span class="lang-en font-sans">Japan's Demographic Pain is the Blueprint for the <span class="text-gradient-emerald">World's Greatest Export</span>.</span>
+          </h2>
+          <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p class="lang-ja">
+              世界で最も急速に少子高齢化・人口減少・地方の中小企業承継難に直面する日本。この極限環境で人手を8割削り、少人数で圧倒的な生産性を叩き出すために構築された「現場AX（AI業務変革）アーキテクチャ」は、今後世界中が必ず直面する構造的危機に対する唯一無二の解決策です。
+            </p>
+            <p class="lang-ja">
+              私たちは、国内の現場で自ら実証（ドッグフーディング）した自動化OSを、人件費高騰に悩む欧米・グローバル市場へドル建て直販。<strong>「ドルで稼ぎ、円で還元する」為替アービトラージ</strong>によって、地方製造業と自社の双方に圧倒的な富と利益率をもたらします。
+            </p>
+
+            <p class="lang-en">
+              Japan is aging and shrinking faster than any other major economy. The radical AX (AI Transformation) systems engineered to cut manual operations by 80% across Japanese manufacturing and service sectors represent the most valuable export for a world increasingly starved of human labor.
+            </p>
+            <p class="lang-en">
+              We dogfood our autonomous engines in the domestic market, prove radical ROI, and export the resulting trade infrastructure globally in USD. Through our structural currency arbitrage model, we drive high-margin foreign capital directly back into regional industries.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="glass-card p-6 rounded-2xl border border-brand-border space-y-6">
+            <div class="border-b border-brand-border/60 pb-4">
+              <div class="font-mono text-xs text-emerald-400 uppercase tracking-widest">// THE VALUE FORMULA</div>
+              <div class="font-mono text-xs text-slate-300 mt-2 bg-brand-bg/80 p-3 rounded-lg border border-white/5">
+                $$	ext{Business Value} = 	ext{[DX Grants × Templates]} 	imes 	ext{[Intent Data Hub]} 	imes 	ext{[Cross-border Direct GMV]} 	imes 	ext{[AI M&A Buyout]}$$
+              </div>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                <span class="text-slate-300">
+                  <strong class="text-white">Domestic Validation:</strong> 現場実証で工数80%削減のエビデンスを蓄積
+                </span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                <span class="text-slate-300">
+                  <strong class="text-white">Zero Marginal Cost:</strong> 自治体DX補助金×業種特化テンプレート量産
+                </span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                <span class="text-slate-300">
+                  <strong class="text-white">Global Direct Trade:</strong> Wise / ステーブルコイン連動で手数料0%・即時決済
+                </span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                <span class="text-slate-300">
+                  <strong class="text-white">AI M&A Rollup:</strong> 後継者不在の優良企業を3大OSで買収・高収益再生
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: Core Operating Engines (3大システム) -->
+  <section id="engines" class="py-24 px-6 border-t border-brand-border bg-brand-surface/30 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xs text-emerald-400 font-bold tracking-widest uppercase">// 02 CORE OPERATING ENGINES</span>
+        <div class="h-[1px] w-12 bg-emerald-500/40"></div>
+      </div>
+
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+          <span class="lang-ja font-mincho">自律駆動型コングロマリットを支える<br><span class="text-gradient-emerald">3大基幹自律OS</span></span>
+          <span class="lang-en font-sans">The 3 Autonomous Core Operating Systems</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          <span class="lang-ja">集客・提案・実務・海外直販決済まで、人間が介在しないゼロ・マージナル・コストの自動化パイプラインを統合展開。</span>
+          <span class="lang-en">Zero-marginal-cost automation pipelines orchestrating outbound intent, distributed labor, and cross-border settlement.</span>
+        </p>
+      </div>
+
+      <!-- 3 Engines Grid -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- System Alpha -->
+        <div class="glass-card p-8 rounded-2xl border border-brand-border flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-md bg-blue-950/60 border border-blue-500/40 text-blue-400 font-mono text-xs font-bold">
+                SYSTEM ALPHA 3.0
+              </span>
+              <i class="fa-solid fa-satellite-dish text-blue-400 text-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <span class="lang-ja">求人インテント検知 ＆<br>47都道府県DX補助金自動照合OS</span>
+              <span class="lang-en">Intelligent Outbound & DX Subsidy Matching Engine</span>
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <span class="lang-ja">
+                企業の求人シグナルや事業課題をリアルタイム検知し、全国自治体のDX補助金（実質負担1/3）と自動突合。Gemini 1.5 ProとGoogle Antigravityにより完全個社最適化された提案書を一発自動生成します。
+              </span>
+              <span class="lang-en">
+                Detects real-time corporate hiring signals, matches with local Japanese DX subsidies (1/3 net cost), and autonomously synthesizes hyper-customized enterprise proposals via Gemini & Antigravity.
+              </span>
+            </p>
+          </div>
+          <div class="pt-6 border-t border-brand-border/60">
+            <div class="font-mono text-[11px] text-blue-400 mb-2">// STACK & INFRA</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Antigravity</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Gemini Pro</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Make</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">GWS Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Beta -->
+        <div class="glass-card p-8 rounded-2xl border border-brand-border flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 font-mono text-xs font-bold">
+                SYSTEM BETA
+              </span>
+              <i class="fa-solid fa-users-gear text-emerald-400 text-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <span class="lang-ja">自律型AIオペレーター組織 ＆<br>分散パートナーネットワーク</span>
+              <span class="lang-en">Autonomous AI Operator & Decentralized Partner Grid</span>
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <span class="lang-ja">
+                LINE-AXファンネルによる即時4問診断（通信費0円）と自社スクールを通じ、AI操縦士を育成。定型実務・データ収集・制作を自社AXと分散パートナーへ完全委託し、固定人件費ゼロで稼働。
+              </span>
+              <span class="lang-en">
+                LINE-AX zero-cost funnel trains and provisions dedicated "AI Operators". Routine delivery, scraping, and content operations are delegated to autonomous agents and certified partners with 0 fixed payroll.
+              </span>
+            </p>
+          </div>
+          <div class="pt-6 border-t border-brand-border/60">
+            <div class="font-mono text-[11px] text-emerald-400 mb-2">// STACK & INFRA</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">LINE Messaging API</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Make</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Dify</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Sheets DB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Gamma -->
+        <div class="glass-card glass-card-gold p-8 rounded-2xl border border-brand-border flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-md bg-amber-950/60 border border-amber-500/40 text-brand-gold font-mono text-xs font-bold">
+                SYSTEM GAMMA
+              </span>
+              <i class="fa-solid fa-earth-americas text-brand-gold text-lg"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <span class="lang-ja">越境ダイレクトトレード ＆<br>Wise / ステーブルコイン直販決済</span>
+              <span class="lang-en">Global Direct Trade Hub & Stablecoin Settlement</span>
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              <span class="lang-ja">
+                国内優良メーカー製品およびAXノウハウを海外バイヤーへドル建て直販。Wise/StripeおよびUSDC即時エスクロー決済により、中間マージンを徹底排除し粗利90%超の外貨為替差益を回収。
+              </span>
+              <span class="lang-en">
+                Direct export of Japanese precision products & AX solutions to global buyers in USD. Wise, Stripe, and instant USDC smart-contract escrow eliminate middlemen, capturing 90%+ gross margins.
+              </span>
+            </p>
+          </div>
+          <div class="pt-6 border-t border-brand-border/60">
+            <div class="font-mono text-[11px] text-brand-gold mb-2">// STACK & INFRA</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Wise API</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Web3.py / USDC</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">eBay Sync</span>
+              <span class="px-2 py-1 rounded bg-brand-bg text-[10px] font-mono text-slate-300 border border-white/5">Global GTM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Future Horizon (2030+ 自律経済圏・フィジカルAI・ブロックチェーン) -->
+  <section id="future" class="py-24 px-6 border-t border-brand-border relative z-10 radial-glow-gold">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xs text-brand-gold font-bold tracking-widest uppercase">// 03 HORIZON 2030+ AUTONOMOUS PROTOCOL</span>
+        <div class="h-[1px] w-12 bg-amber-500/40"></div>
+      </div>
+
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+          <span class="lang-ja font-mincho">ソフトウェアの先へ。<br><span class="text-gradient-gold">フィジカルAI ✕ ブロックチェーン自律経済圏</span></span>
+          <span class="lang-en font-sans">Beyond Software: Physical AI & Autonomous Blockchain Conglomerate</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          <span class="lang-ja">デジタルAXの完結後、ロボティクスによる現場物理稼働の自動化と、AIエージェント間決済（A2A Settlement）プロトコルによって全産業を自律コングロマリットへ統合。</span>
+          <span class="lang-en">Orchestrating physical robotics and Autonomous Agent-to-Agent (A2A) settlement protocols across heavy industry, semiconductor, logistics, and beyond.</span>
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Physical AI & Robotics -->
+        <div class="glass-card p-8 rounded-2xl border border-brand-border space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-brand-gold text-xl">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">
+                <span class="lang-ja">フィジカルAI（現場ロボティクス自動化）</span>
+                <span class="lang-en">Physical AI & Robotics Orchestration</span>
+              </h3>
+              <div class="font-mono text-xs text-brand-gold">Autonomous Physical Operations</div>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-ja">
+              買収・支援先の町工場や物流拠点へ協働ロボット・AIセンシングを統合配備。熟練職人の技能データをデジタル化し、最小人員で24時間稼働する完全無人・高収益ファクトリーへと再生します。
+            </span>
+            <span class="lang-en">
+              Deploying physical cobots and AI computer-vision sensing across manufacturing and logistics facilities. Digitizing master artisan skills into autonomous 24/7 dark-factory operations.
+            </span>
+          </p>
+          <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-industry text-amber-400"></i> 製造・町工場再生
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-truck-fast text-amber-400"></i> 物流自律配送網
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-microchip text-amber-400"></i> 半導体・精密加工
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-amber-400"></i> AI自律ドローン警備
+            </div>
+          </div>
+        </div>
+
+        <!-- A2A Settlement & Stablecoin -->
+        <div class="glass-card p-8 rounded-2xl border border-brand-border space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+              <i class="fa-solid fa-link"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">
+                <span class="lang-ja">AIエージェント間決済（A2A）＆ EDI代替</span>
+                <span class="lang-en">Autonomous A2A Settlement & EDI Replace</span>
+              </h3>
+              <div class="font-mono text-xs text-emerald-400">Smart Contract DvP & Micro-Payments</div>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-ja">
+              人間が介在しないAIエージェント同士の業務受発注・交渉・即時決済（A2A）を実現。レガシーEDIをリプレイスし、検収確定と同時にUSDC/JPYC等ステーブルコインで即時着金（DvP）を完結。
+            </span>
+            <span class="lang-en">
+              Machine-to-Machine autonomous enterprise negotiations and micro-settlements without humans. Replacing legacy B2B EDI with instant smart-contract Delivery versus Payment (DvP) using USDC/JPYC.
+            </span>
+          </p>
+          <div class="grid grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-emerald-400"></i> 24h365日 即時着金
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-coins text-emerald-400"></i> 手数料0円台 (Gas Only)
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-lock text-emerald-400"></i> 自動エスクロー保証
+            </div>
+            <div class="p-3 bg-brand-bg/60 rounded-lg border border-white/5 flex items-center gap-2">
+              <i class="fa-solid fa-rocket text-emerald-400"></i> 衛星間・宇宙A2A拡張
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04: Architect Profile (千田朋明) -->
+  <section id="architect" class="py-24 px-6 border-t border-brand-border bg-brand-surface/30 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xs text-emerald-400 font-bold tracking-widest uppercase">// 04 FOUNDER & ARCHITECT</span>
+        <div class="h-[1px] w-12 bg-emerald-500/40"></div>
+      </div>
+
+      <div class="glass-card p-8 md:p-12 rounded-3xl border border-brand-border relative overflow-hidden">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-4 flex flex-col items-center text-center">
+            <div class="w-36 h-36 rounded-2xl bg-gradient-to-br from-emerald-400/20 via-slate-800 to-brand-bg p-1 border border-emerald-500/40 mb-6 shadow-[0_0_30px_rgba(16,185,129,0.2)] flex items-center justify-center">
+              <div class="w-full h-full bg-brand-surface rounded-[14px] flex flex-col items-center justify-center text-slate-400">
+                <i class="fa-solid fa-code-merge text-4xl text-emerald-400 mb-2"></i>
+                <span class="font-mono text-[10px] uppercase text-slate-400">AX Architect</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-1">千田 朋明</h3>
+            <div class="font-mono text-xs text-emerald-400 tracking-wider mb-3">TOMOAKI CHIDA</div>
+            <p class="text-xs text-slate-400 font-mono">Connect Marketing 代表 / AX Architect</p>
+          </div>
+
+          <div class="lg:col-span-8 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-bg border border-white/10 font-mono text-xs text-emerald-400">
+              <i class="fa-solid fa-terminal"></i>
+              <span>「コードを書かない」AI業務自動化アーキテクト</span>
+            </div>
+
+            <h4 class="text-xl sm:text-2xl font-bold text-white font-mincho">
+              <span class="lang-ja">15年超のIT・マーケ知見 ✕ ゲーム開発の論理設計 ✕ M&Aバイアウト実績</span>
+              <span class="lang-en font-sans">15+ Years IT/Marketing Mastery × Game Logic Design × M&A Buyout Track Record</span>
+            </h4>
+
+            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+              <p class="lang-ja">
+                ゲームプログラミング出身の強固な構造化・アルゴリズム設計力をバックボーンに、上場企業提携教育事業の立ち上げからM&A（バイアウト）までを主導。
+              </p>
+              <p class="lang-ja">
+                自ら最新生成AI（Gemini, Antigravity）やノーコード基盤を極限までドッグフーディングし、自社の営業・運用工数を80%削減。単なるツールの操作指導ではなく、インテントデータ連動と越境即時決済を統合した<strong>「次世代コングロマリットの青写真」</strong>を構築し統制します。
+              </p>
+
+              <p class="lang-en">
+                Leveraging rigorous software design logic from game development and a demonstrated track record leading edtech ventures from inception to corporate M&A buyouts.
+              </p>
+              <p class="lang-en">
+                Championing radical dogfooding—cutting internal operating overhead by 80% with autonomous Gemini and Antigravity stacks. Overseeing the architectural blueprints for cross-border autonomous conglomerates rather than standard consulting.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-brand-border/60 text-center font-mono">
+              <div>
+                <div class="text-xl font-bold text-white">15<span class="text-emerald-400 text-sm">Y+</span></div>
+                <div class="text-[10px] text-slate-400 uppercase">IT & Marketing Exp</div>
+              </div>
+              <div>
+                <div class="text-xl font-bold text-white">100<span class="text-emerald-400 text-sm">%</span></div>
+                <div class="text-[10px] text-slate-400 uppercase">Dogfooding Policy</div>
+              </div>
+              <div>
+                <div class="text-xl font-bold text-white">M&A</div>
+                <div class="text-[10px] text-slate-400 uppercase">Buyout Executed</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Roadmap (2026-2030) -->
+  <section id="roadmap" class="py-24 px-6 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono text-xs text-emerald-400 font-bold tracking-widest uppercase">// 05 EXPONENTIAL ROADMAP (2026-2030)</span>
+        <div class="h-[1px] w-12 bg-emerald-500/40"></div>
+      </div>
+
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+          <span class="lang-ja font-mincho">1年前倒し・段階的スケール計画</span>
+          <span class="lang-en font-sans">Strategic Scalability Roadmap</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          <span class="lang-ja">2029年無借金プライベートHD化から2030年の全産業自律コングロマリットへ。</span>
+          <span class="lang-en">Fast-tracking zero-debt private holding structure by 2029, scaling to cross-industry autonomous ecosystem by 2030.</span>
+        </p>
+      </div>
+
+      <!-- Roadmap Timeline Table -->
+      <div class="space-y-4 font-mono text-xs">
+        
+        <!-- 2026 -->
+        <div class="glass-card p-6 rounded-xl border border-brand-border grid md:grid-cols-12 gap-4 items-center">
+          <div class="md:col-span-3">
+            <span class="text-emerald-400 font-bold text-sm">2026 (Validation)</span>
+            <div class="text-slate-400 text-[11px]">個人検証・3大OS実証期</div>
+          </div>
+          <div class="md:col-span-6 text-slate-300 font-sans text-xs">
+            採用LP納品・System Alpha/Beta/Gamma自社徹底検証。分散パートナー育成開始。
+          </div>
+          <div class="md:col-span-3 text-right">
+            <div class="text-white font-bold text-sm font-mono">¥200M ~ ¥500M</div>
+            <div class="text-[10px] text-slate-400">Target Range</div>
+          </div>
+        </div>
+
+        <!-- 2027 -->
+        <div class="glass-card p-6 rounded-xl border border-brand-border grid md:grid-cols-12 gap-4 items-center">
+          <div class="md:col-span-3">
+            <span class="text-emerald-400 font-bold text-sm">2027 (Scale Phase 1)</span>
+            <div class="text-slate-400 text-[11px]">法人化・テンプレート量産期</div>
+          </div>
+          <div class="md:col-span-6 text-slate-300 font-sans text-xs">
+            株式会社設立。補助金×業種特化テンプレート代理店展開（信金・税理士アライアンス）。
+          </div>
+          <div class="md:col-span-3 text-right">
+            <div class="text-white font-bold text-sm font-mono">¥50,000,000 ~ 1.5億円</div>
+            <div class="text-[10px] text-slate-400">Target Range</div>
+          </div>
+        </div>
+
+        <!-- 2028 -->
+        <div class="glass-card p-6 rounded-xl border border-brand-border grid md:grid-cols-12 gap-4 items-center">
+          <div class="md:col-span-3">
+            <span class="text-emerald-400 font-bold text-sm">2028 (Platform)</span>
+            <div class="text-slate-400 text-[11px]">データ連合ハブ・越境直販展開</div>
+          </div>
+          <div class="md:col-span-6 text-slate-300 font-sans text-xs">
+            インテントデータ連合ハブ外販。地方製造業の越境直販GMVレベニューシェア・海外企業GTM受託。
+          </div>
+          <div class="md:col-span-3 text-right">
+            <div class="text-white font-bold text-sm font-mono">¥2.5億 ~ 8.5億円</div>
+            <div class="text-[10px] text-slate-400">Target Range</div>
+          </div>
+        </div>
+
+        <!-- 2029 -->
+        <div class="glass-card glass-card-gold p-6 rounded-xl border border-brand-border grid md:grid-cols-12 gap-4 items-center">
+          <div class="md:col-span-3">
+            <span class="text-brand-gold font-bold text-sm">2029 (Holdings Target)</span>
+            <div class="text-slate-400 text-[11px]">プライベートHD・AI M&A期</div>
+          </div>
+          <div class="md:col-span-6 text-slate-300 font-sans text-xs">
+            Connect Marketing ホールディングス設立。後継者不在の中小企業AI買収・再生・海外直販流し込み。
+          </div>
+          <div class="md:col-span-3 text-right">
+            <div class="text-brand-gold font-bold text-sm font-mono">¥15億 ~ 30億円+</div>
+            <div class="text-[10px] text-slate-400">Zero-Debt Private HD</div>
+          </div>
+        </div>
+
+        <!-- 2030+ -->
+        <div class="glass-card glass-card-gold p-6 rounded-xl border border-brand-border grid md:grid-cols-12 gap-4 items-center">
+          <div class="md:col-span-3">
+            <span class="text-brand-gold font-bold text-sm">2030+ (Autonomous Frontier)</span>
+            <div class="text-slate-400 text-[11px]">全産業自律コングロマリット</div>
+          </div>
+          <div class="md:col-span-6 text-slate-300 font-sans text-xs">
+            フィジカルAI（ロボティクス）× ブロックチェーンA2A決済プロトコルによる全産業掌握 ＆ 宇宙インフラ拡張。
+          </div>
+          <div class="md:col-span-3 text-right">
+            <div class="text-brand-gold font-bold text-sm font-mono">Multi-Industry Ecosystem</div>
+            <div class="text-[10px] text-slate-400">A2A Protocol Dominance</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 06: Contact / Alliance Form -->
+  <section id="contact" class="py-24 px-6 border-t border-brand-border bg-brand-surface/40 relative z-10">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">MISSION & PHILOSOPHY</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">日本の「課題」は、世界の「輸出品」になる。</p>
-      </div>
-
-      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
-        <p class="text-white font-semibold text-xl font-serif">
-          「少子高齢化、人手不足、事業承継難。日本が直面する壁は、未来の世界が直面する壁そのものである。」
-        </p>
-        <p>
-          私たちは、地方の中小企業や町工場が抱える深刻な人手不足を、単なるツールの導入ではなく「自社AX（AI業務変革）アーキテクチャ」によって根本から解体・自律化してきました。
-        </p>
-        <p>
-          国内の極限の現場で人手を8割削り、少人数で高生産性を叩き出すために鍛え上げられたオペレーションは、今後まったく同じ課題を迎える欧米・アジア諸国にとって最も価値ある<strong class="text-brand-accent">『最大の輸出品（課題解決輸出）』</strong>となります。
-        </p>
-        <p class="border-l-2 border-brand-gold pl-4 text-slate-200">
-          「ドルで稼ぎ、円で還元する」。グローバル市場から得た外貨とテクノロジーを日本の地方現場へ還流させ、持続可能な自律型産業エコシステムを再構築します。
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 font-mono text-xs mb-4">
+          // INITIATE CONTACT & ALLIANCE
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+          <span class="lang-ja font-mincho">現場AX導入・提携・越境直販に関するご相談</span>
+          <span class="lang-en font-sans">Initiate Enterprise AX & Strategic Alliance</span>
+        </h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto">
+          <span class="lang-ja">金融機関・税理士のアライアンス、地方製造業の海外直販、自社現場へのSystem Alpha導入要件をご相談ください。</span>
+          <span class="lang-en">For institutional alliances, regional cross-border exports, and enterprise autonomous OS integration.</span>
         </p>
       </div>
-    </div>
-  </section>
 
-  <section id="systems" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">CORE OPERATING ENGINES</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">Connect Marketing を駆動する3大自律システム</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">System Alpha 3.0</span>
-              <i class="fas fa-radar text-blue-400 text-xl"></i>
+      <div class="glass-card p-8 md:p-10 rounded-2xl border border-brand-border">
+        <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-2">貴社名 / Organization Name</label>
+              <input type="text" required placeholder="例: 株式会社Polaris" class="w-full px-4 py-3 rounded-lg bg-brand-bg/80 border border-brand-border focus:border-emerald-500 text-white text-sm focus:outline-none transition-colors">
             </div>
-            <h3 class="text-xl font-bold font-serif mb-3">Intelligent Outbound OS</h3>
-            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
-              47都道府県のDX補助金自動照合 ✕ Indeed等の求人ペインシグナル検知。超個社提案を完全自動生成し、全国の現場へAXを即時インストールする実証エンジン。
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/5 text-xs text-blue-300 font-mono">
-            Key: 連合データハブ / インテント検知
-          </div>
-        </div>
-
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-mono text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">System Beta</span>
-              <i class="fas fa-network-wired text-rose-400 text-xl"></i>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-2">ご担当者様名 / Full Name</label>
+              <input type="text" required placeholder="例: 山田 太郎" class="w-full px-4 py-3 rounded-lg bg-brand-bg/80 border border-brand-border focus:border-emerald-500 text-white text-sm focus:outline-none transition-colors">
             </div>
-            <h3 class="text-xl font-bold font-serif mb-3">LINE-AX & Operator Hub</h3>
-            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
-              インハウス育成プログラムにより、外部人材を「AI操縦士」として組織化。固定人件費ゼロで現場制作・運用・データ収集を支える分散型パートナーネットワーク。
-            </p>
           </div>
-          <div class="pt-4 border-t border-white/5 text-xs text-rose-300 font-mono">
-            Key: 人材インハウス化 / 分散型労働力
-          </div>
-        </div>
 
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs font-mono text-brand-accent bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">System Gamma</span>
-              <i class="fas fa-globe text-brand-accent text-xl"></i>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-2">メールアドレス / Work Email</label>
+              <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-lg bg-brand-bg/80 border border-brand-border focus:border-emerald-500 text-white text-sm focus:outline-none transition-colors">
             </div>
-            <h3 class="text-xl font-bold font-serif mb-3">Global Intelligent Direct Trade</h3>
-            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
-              地方優良メーカーの海外バイヤー逆引き開拓 ✕ ドル建て決済（Wise/USDC）。自社物販からBtoB輸出代行、海外SaaSの日本進出（GTM）まで外貨を直接獲得。
-            </p>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-2">ご相談種別 / Category</label>
+              <select class="w-full px-4 py-3 rounded-lg bg-brand-bg/80 border border-brand-border focus:border-emerald-500 text-white text-sm focus:outline-none transition-colors">
+                <option value="alpha">System Alpha 3.0 現場導入・補助金診断</option>
+                <option value="gamma">System Gamma 地方製造業の越境ドル直販</option>
+                <option value="alliance">提携アライアンス（金融機関・士業・パートナー）</option>
+                <option value="gtm">海外企業の日本進出（GTM）代行</option>
+                <option value="ma">中小企業事業承継・AI M&A</option>
+              </select>
+            </div>
           </div>
-          <div class="pt-4 border-t border-white/5 text-xs text-brand-accent font-mono">
-            Key: 越境直販 / 為替アービトラージ
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-2">ご相談内容 / Inquiry Details</label>
+            <textarea rows="4" placeholder="現在の現場課題やご検討中の要件をご記入ください..." class="w-full px-4 py-3 rounded-lg bg-brand-bg/80 border border-brand-border focus:border-emerald-500 text-white text-sm focus:outline-none transition-colors"></textarea>
           </div>
+
+          <button type="submit" class="w-full py-4 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-brand-bg font-mono font-bold text-sm tracking-wider uppercase transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.35)]">
+            <span class="lang-ja">要件を送信する（AI自律解析 ＆ 即時受付）</span>
+            <span class="lang-en">SUBMIT INQUIRY (AUTONOMOUS ROUTING)</span>
+          </button>
+        </form>
+        <div id="formSuccess" class="hidden mt-4 p-4 rounded-lg bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 text-xs font-mono text-center">
+          ✓ お問い合わせを受付いたしました。AI自律オーケストレーションにより担当アーキテクトより迅速に返答いたします。
         </div>
       </div>
     </div>
   </section>
 
-  <section id="vision" class="py-24 px-6 border-t border-white/5 relative">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3 font-mono">2030+ FUTURE INFRASTRUCTURE</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">全産業のフィジカルAI ✕ ブロックチェーン自律経済圏</p>
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-brand-border bg-brand-bg relative z-10 font-mono text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="text-white font-bold tracking-wider">CONNECT MARKETING</span>
+        <span class="text-emerald-400/80">| Next-Gen Autonomous Conglomerate</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-accent">
-          <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-xl mb-6">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h3 class="text-xl font-bold font-serif mb-3">フィジカルAI（ロボティクス）× 現場自動化</h3>
-          <p class="text-sm text-brand-textMuted leading-relaxed">
-            ソフトウェアの自動化に留まらず、買収・支援先の工場、物流、一次産業現場へ協働ロボットやエッジAIセンサーを統合。日本の人手不足現場を「完全省人化ファクトリー」へと再生し、世界標準パッケージとして輸出します。
-          </p>
-        </div>
-
-        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-gold">
-          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-xl mb-6">
-            <i class="fas fa-coins"></i>
-          </div>
-          <h3 class="text-xl font-bold font-serif mb-3">自律型「AIエージェント間決済（A2A Settlement）」</h3>
-          <p class="text-sm text-brand-textMuted leading-relaxed">
-            レガシーEDIを排除し、ステーブルコイン（USDC等）を用いた商流・金流の同時完結（DvP）を確立。AIエージェント同士が自律的に条件交渉・受発注を行い、スマートコントラクトでマイクロ決済を即時処理する基幹プロトコルを掌握します。
-          </p>
-        </div>
+      <div class="flex items-center gap-6">
+        <a href="#philosophy" class="hover:text-emerald-400 transition-colors">Philosophy</a>
+        <a href="#engines" class="hover:text-emerald-400 transition-colors">Engines</a>
+        <a href="#future" class="hover:text-emerald-400 transition-colors">2030+ Horizon</a>
+        <a href="#architect" class="hover:text-emerald-400 transition-colors">Architect</a>
       </div>
-    </div>
-  </section>
 
-  <section id="architect" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-32 h-32 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-brand-accent to-slate-800 flex items-center justify-center text-5xl text-white font-serif font-bold shadow-2xl flex-shrink-0">
-          TC
-        </div>
-        <div class="space-y-4 text-left">
-          <div class="inline-block text-xs font-mono text-brand-accent uppercase tracking-wider border border-brand-accent/30 px-3 py-1 rounded-full">
-            Founder & Lead AX Architect
-          </div>
-          <h3 class="text-2xl md:text-3xl font-bold font-serif">千田 朋明 / Tomoaki Chida</h3>
-          <p class="text-sm text-brand-textMuted leading-relaxed">
-            IT・デジタルマーケティング歴15年以上。ゲームプログラミング出身の強固な論理思考力をバックボーンに、上場企業提携事業の立ち上げからM&Aバイアウトまでを主導。<br>
-            「コードを書かないアーキテクト」として、Google AntigravityやLLM推論環境を駆使し、自社およびクライアントの労働集約型業務を徹底的に自律化。2029年プライベート・ホールディングス設立を牽引する。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-24 px-6 hero-glow border-t border-white/5">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">CONTACT & ALLIANCE</h2>
-      <p class="text-3xl md:text-4xl font-bold font-serif mb-6">次世代AXアーキテクチャの共創へ</p>
-      <p class="text-brand-textMuted text-sm md:text-base mb-10 leading-relaxed">
-        自治体DX補助金を活用した現場AXの導入、地方金融機関・税理士アライアンス、越境BtoB輸出代行、AI M&Aに関するご相談を承ります。
-      </p>
-
-      <form class="glass-card p-8 rounded-3xl text-left space-y-5" onsubmit="event.preventDefault(); alert('お問い合わせを受け付けました。専任アーキテクトよりご連絡いたします。');">
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">貴社名 / 組織名 <span class="text-brand-accent">*</span></label>
-          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="株式会社〇〇">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">お名前 <span class="text-brand-accent">*</span></label>
-          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="山田 太郎">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">メールアドレス <span class="text-brand-accent">*</span></label>
-          <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="info@example.com">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">ご相談種別</label>
-          <select class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent">
-            <option>現場AX・補助金自動照合パッケージ導入</option>
-            <option>地方金融機関・税理士アライアンス提携</option>
-            <option>System Gamma 越境直販・輸出代行</option>
-            <option>中小企業AI M&A・事業再生相談</option>
-            <option>その他・取材・提携</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">お問い合わせ内容</label>
-          <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="具体的な課題やご希望をご記入ください"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-black font-bold py-4 rounded-xl shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-[1.01]">
-          送信する
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-brand-textMuted">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="text-sm font-bold font-serif tracking-widest text-white">CONNECT MARKETING</div>
-      <div>© 2026 Connect Marketing. All Rights Reserved.</div>
-      <div class="flex space-x-6">
-        <a href="#philosophy" class="hover:text-white transition">理念</a>
-        <a href="#systems" class="hover:text-white transition">システム</a>
-        <a href="./en/" class="text-brand-accent hover:underline">English</a>
+      <div>
+        &copy; 2026 Connect Marketing. All Rights Reserved.
       </div>
     </div>
   </footer>
 
+  <!-- Script for Language Toggle & Form -->
+  <script>
+    let isEnglish = false;
+    function toggleLanguage() {
+      isEnglish = !isEnglish;
+      document.body.classList.toggle('en-mode', isEnglish);
+      const label = document.getElementById('langLabel');
+      label.textContent = isEnglish ? 'EN / JP' : 'JP / EN';
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const successDiv = document.getElementById('formSuccess');
+      successDiv.classList.remove('hidden');
+      setTimeout(() => {
+        alert(isEnglish ? "Thank you. Your request has been routed to our AX Architecture office." : "お問い合わせありがとうございます。要件を受付いたしました。");
+      }, 300);
+    }
+  </script>
 </body>
 </html>
