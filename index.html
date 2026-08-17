@@ -1,371 +1,181 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect Marketing | 現場の定型業務を8割削減するAI業務自動化（AX）</title>
-  <meta name="description" content="人の手で行うリサーチ・メール作成・データ入力をAIで自動化。Google Workspaceを活用し、自治体DX補助金で実質負担を抑えた現場密着型の業務変革（AX）を提供します。">
+  <title>【無料配布中】1分で8大SNS投稿案を一括生成する分身AIプロンプト | Connect Marketing</title>
+  <meta name="description" content="1行のメモからX・note・LinkedIn・YouTube台本など8大SNSの投稿案を瞬時に同時作成。現場で実際に毎日使っている実務用AIプロンプト（Gem）を無料公開中。">
   
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              bg: '#0B0F17',
-              card: '#131A26',
-              cardBorder: 'rgba(255, 255, 255, 0.08)',
-              accent: '#10B981',
-              accentHover: '#059669',
-              gold: '#D4AF37',
-              textMuted: '#94A3B8'
-            }
-          },
-          fontFamily: {
-            sans: ['Noto Sans JP', 'Inter', 'sans-serif'],
-            serif: ['Shippori Mincho', 'serif'],
-          }
-        }
-      }
-    }
-  </script>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body {
-      background-color: #0B0F17;
-      color: #F8FAFC;
       font-family: 'Noto Sans JP', sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
     }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.12), transparent 70%),
-                  radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.06), transparent 60%);
-    }
-    .glass-card {
-      background: rgba(19, 26, 38, 0.75);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .glass-card-hover:hover {
-      border-color: rgba(16, 185, 129, 0.4);
-      transform: translateY(-4px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    .font-serif-jp {
+      font-family: 'Shippori Mincho', serif;
     }
   </style>
 </head>
-<body class="selection:bg-brand-accent selection:text-black">
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
 
-  <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all">
-    <div class="flex items-center space-x-3">
-      <a href="#" class="text-xl md:text-2xl font-bold tracking-widest font-serif text-white flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent animate-pulse"></span>
+  <header class="border-b border-slate-200 bg-white sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="font-bold tracking-widest text-slate-900 text-sm md:text-base font-serif-jp">
         CONNECT MARKETING
-      </a>
-    </div>
-    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-textMuted">
-      <a href="#problems" class="hover:text-white transition">現場の課題</a>
-      <a href="#solutions" class="hover:text-white transition">提供ソリューション</a>
-      <a href="#flow" class="hover:text-white transition">導入の流れ</a>
-      <a href="#profile" class="hover:text-white transition">代表紹介</a>
-      <a href="#free-gift" class="text-brand-accent hover:underline">無料特典Gems</a>
-    </nav>
-    <div class="flex items-center space-x-4">
-      <a href="./en/" class="text-xs font-mono px-3 py-1.5 rounded border border-white/20 text-white hover:border-brand-accent transition">
-        EN ➔
-      </a>
-      <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs md:text-sm px-5 py-2.5 rounded-full shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-105">
-        無料相談・診断
+      </div>
+      <a href="#download" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs md:text-sm px-4 py-2 rounded-lg transition shadow-sm">
+        無料でGemを受取る
       </a>
     </div>
   </header>
 
-  <section class="relative pt-36 pb-20 md:pt-48 md:pb-36 px-6 hero-glow overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-brand-accent/30 text-brand-accent text-xs md:text-sm font-medium mb-8">
-        <i class="fas fa-microchip"></i>
-        <span>Google Workspace ✕ AI で実現する現場密着型AX</span>
-      </div>
-      
-      <h1 class="text-3xl md:text-6xl font-bold tracking-tight leading-tight md:leading-snug mb-8 font-serif">
-        人の手で行う定型業務を、<br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-brand-accent">
-          8割削減する。
-        </span>
-      </h1>
-      
-      <p class="text-base md:text-xl text-brand-textMuted max-w-3xl mx-auto mb-12 leading-relaxed">
-        営業リストの作成、毎日のメール処理、定型データ入力……。<br class="hidden md:inline">
-        高額な専用ソフトを契約することなく、お使いのGoogle環境とAIを直結させて現場の無駄な時間をゼロにします。
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">80%+</div>
-          <div class="text-xs text-brand-textMuted">定型作業工数の削減</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">月額数百円〜</div>
-          <div class="text-xs text-brand-textMuted">Google基盤でツール費極小</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">実質 1/3</div>
-          <div class="text-xs text-brand-textMuted">自治体DX補助金対応</div>
-        </div>
-        <div class="glass-card p-5 rounded-2xl">
-          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">伴走型</div>
-          <div class="text-xs text-brand-textMuted">現場が回るまで徹底定着</div>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold px-8 py-4 rounded-full shadow-lg shadow-brand-accent/25 transition-all transform hover:scale-105">
-          まずは無料AX診断を申し込む
-        </a>
-        <a href="#free-gift" class="glass-card hover:bg-white/10 text-white font-medium px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2">
-          <i class="fas fa-gift text-brand-gold"></i>
-          <span>無料特典プロンプトを受取る</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="problems" class="py-24 px-6 border-t border-white/5 relative">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">PAINS & BOTTLENECK</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">こんな「手作業の山」に追われていませんか？</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-rose-500">
-          <div class="text-rose-400 text-xl mb-3"><i class="fas fa-user-clock"></i></div>
-          <h3 class="text-base font-bold mb-2">営業リスト・リサーチに毎日2時間</h3>
-          <p class="text-xs text-brand-textMuted leading-relaxed">
-            Web検索で企業情報を1社ずつ調べ、メール文面を手入力。リサーチだけで午前中が終わってしまう。
-          </p>
-        </div>
-
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-rose-500">
-          <div class="text-rose-400 text-xl mb-3"><i class="fas fa-envelope-open-text"></i></div>
-          <h3 class="text-base font-bold mb-2">問い合わせ対応・定型入力の山</h3>
-          <p class="text-xs text-brand-textMuted leading-relaxed">
-            届いたメールの仕分け、スプレッドシートへの転記、一次返信……。ルーティン作業に追われ本業に集中できない。
-          </p>
-        </div>
-
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-rose-500">
-          <div class="text-rose-400 text-xl mb-3"><i class="fas fa-ban"></i></div>
-          <h3 class="text-base font-bold mb-2">AIを入れたいが何から始めればいいか不明</h3>
-          <p class="text-xs text-brand-textMuted leading-relaxed">
-            「ChatGPTを試したが現場業務で使えなかった」「高額な開発コンサルに何百万円も払えない」と頓挫している。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="solutions" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">OUR SOLUTIONS</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">現場が自律的に回る「3つの自動化支援」</p>
-      </div>
-
-      <div class="space-y-8">
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col md:flex-row gap-6 items-start">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-brand-accent flex items-center justify-center text-2xl flex-shrink-0">
-            <i class="fas fa-sliders"></i>
-          </div>
-          <div class="space-y-3 flex-1">
-            <div class="flex items-center gap-3">
-              <span class="text-xs font-mono text-brand-accent bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">STEP 1｜社内業務DX</span>
-              <h3 class="text-xl font-bold font-serif">Google Workspace × AI 現場自動化パッケージ</h3>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              現在お使いのGoogle環境（Gmail, ドライブ, スプレッドシート）にAIエージェントを直結。問い合わせメールの自動判定・下書き作成・議事録要約・データ転記を完全無人化します。高額な新規ツールの契約は不要です。
-            </p>
-            <div class="text-xs text-brand-textMuted flex gap-4 pt-2">
-              <span>✓ 初期費用：5万〜15万円</span>
-              <span>✓ 追加ツール費：月額数百円〜</span>
-              <span>✓ 納期：最短3日</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col md:flex-row gap-6 items-start">
-          <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl flex-shrink-0">
-            <i class="fas fa-paper-plane"></i>
-          </div>
-          <div class="space-y-3 flex-1">
-            <div class="flex items-center gap-3">
-              <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">STEP 2｜売上拡大</span>
-              <h3 class="text-xl font-bold font-serif">BtoB営業・リサーチ自動化OS導入</h3>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              ターゲット企業のWebサイトや求人シグナルをAIが自動分析し、相手企業の課題に合わせた「超個社提案メールの下書き」を一括自動生成。営業担当者のリサーチ時間をゼロにし、アプローチ件数と商談化率を劇的に引き上げます。
-            </p>
-            <div class="text-xs text-brand-textMuted flex gap-4 pt-2">
-              <span>✓ 初期費用：30万〜50万円</span>
-              <span>✓ 月額保守・データ更新対応</span>
-              <span>✓ 営業工数8割減</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col md:flex-row gap-6 items-start">
-          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-brand-gold flex items-center justify-center text-2xl flex-shrink-0">
-            <i class="fas fa-landmark"></i>
-          </div>
-          <div class="space-y-3 flex-1">
-            <div class="flex items-center gap-3">
-              <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">安心の導入制度</span>
-              <h3 class="text-xl font-bold font-serif">47都道府県 DX補助金活用・導入支援</h3>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              各自治体や国の「DX推進補助金・業務改善助成金」を貴社の所在地に合わせて自動照合。申請要件の確認からシステム導入までを一貫してサポートし、実質的な初期投資負担を1/3〜1/2に抑えた導入を支援します。
-            </p>
-            <div class="text-xs text-brand-textMuted flex gap-4 pt-2">
-              <span>✓ 補助金対象の無料事前診断</span>
-              <span>✓ 地方金融機関・税理士連携</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="free-gift" class="py-20 px-6 hero-glow border-t border-white/5">
-    <div class="max-w-3xl mx-auto glass-card p-8 md:p-12 rounded-3xl border border-brand-gold/30 text-center relative overflow-hidden">
-      <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold mb-6">
+  <main class="max-w-3xl mx-auto px-6 py-12 md:py-20">
+    
+    <div class="text-center mb-6">
+      <span class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
         <i class="fas fa-gift"></i>
-        <span>無料プレゼント配布中</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-bold font-serif mb-4">
-        1分で8大SNS投稿案を一括生成する<br>
-        「分身AIプロンプト（無料Gems）」
+        <span>期間限定・実務用プロンプト無料公開</span>
+      </span>
+    </div>
+
+    <h1 class="text-2xl md:text-4xl font-bold font-serif-jp text-center text-slate-900 leading-snug md:leading-tight mb-6">
+      1行のメモから、<br class="hidden md:inline">
+      8大SNSの投稿案を「1分」で一括生成する。<br>
+      <span class="text-emerald-600">実務用・分身AIプロンプト（無料Gem）</span>
+    </h1>
+
+    <p class="text-sm md:text-base text-slate-600 text-center max-w-xl mx-auto mb-10 leading-relaxed">
+      毎日の情報発信やネタ出しに追われていませんか？<br>
+      自社で毎日実際に稼働させている「Gemini専用プロンプト」をそのままお渡しします。コピペですぐにお使いいただけます。
+    </p>
+
+    <div id="download" class="bg-white border-2 border-emerald-500/30 rounded-2xl p-6 md:p-8 shadow-xl mb-16 relative">
+      <h2 class="text-base md:text-lg font-bold text-slate-900 text-center mb-2">
+        【無料】プロンプト送付先メールアドレスをご入力ください
       </h2>
-      <p class="text-sm text-brand-textMuted max-w-xl mx-auto mb-8 leading-relaxed">
-        自社で実際に毎日稼働させている実務用プロンプトを無料公開。1行のメモからX、note、LinkedIn、YouTube台本など7フォーマットを瞬時に同時生成する体験をお試しください。
+      <p class="text-xs text-slate-500 text-center mb-6">
+        登録後、ご入力いただいたメールアドレス宛にプロンプト設定用コードを即時自動送信します。
       </p>
 
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('特典プロンプトの送付先を受け付けました。');">
-        <input type="email" required placeholder="メールアドレスを入力" class="flex-1 bg-white/5 border border-white/10 rounded-full px-5 py-3 text-sm text-white focus:outline-none focus:border-brand-accent">
-        <button type="submit" class="bg-brand-gold hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full text-sm shadow-lg transition transform hover:scale-105">
-          無料で受取る
+      <form class="space-y-4 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('ご登録ありがとうございます。プロンプトをメール宛に送信しました。');">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">メールアドレス <span class="text-rose-500">*</span></label>
+          <input type="email" required placeholder="example@company.com" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">お名前（またはニックネーム）</label>
+          <input type="text" placeholder="山田 太郎" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200">
+        </div>
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl text-base shadow-md transition transform active:scale-95 flex items-center justify-center gap-2">
+          <span>今すぐ無料でプロンプトを受け取る</span>
+          <i class="fas fa-arrow-right text-sm"></i>
         </button>
       </form>
-    </div>
-  </section>
-
-  <section id="flow" class="py-24 px-6 border-t border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">FLOW</h2>
-        <p class="text-2xl md:text-4xl font-bold font-serif">導入までの4ステップ</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div class="glass-card p-6 rounded-2xl relative">
-          <div class="text-brand-accent font-mono font-bold text-lg mb-2">01</div>
-          <h3 class="text-sm font-bold mb-2">無料AX診断・相談</h3>
-          <p class="text-xs text-brand-textMuted">現在の業務フローをヒアリングし、自動化できるポイントを特定。</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl relative">
-          <div class="text-brand-accent font-mono font-bold text-lg mb-2">02</div>
-          <h3 class="text-sm font-bold mb-2">補助金・要件確認</h3>
-          <p class="text-xs text-brand-textMuted">活用可能な自治体DX補助金と導入費用の概算シミュレーションを提示。</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl relative">
-          <div class="text-brand-accent font-mono font-bold text-lg mb-2">03</div>
-          <h3 class="text-sm font-bold mb-2">構築・プロトタイプ検証</h3>
-          <p class="text-xs text-brand-textMuted">お使いのGoogle環境と連携させ、最短3日〜2週間で実稼働ラインを構築。</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl relative">
-          <div class="text-brand-accent font-mono font-bold text-lg mb-2">04</div>
-          <h3 class="text-sm font-bold mb-2">現場定着・運用伴走</h3>
-          <p class="text-xs text-brand-textMuted">社内スタッフへの操作案内とプロンプト改善を伴走支援。</p>
-        </div>
+      <div class="text-[11px] text-slate-400 text-center mt-3 flex items-center justify-center gap-2">
+        <i class="fas fa-lock"></i>
+        <span>スパム送信等は一切行いません。いつでも解除可能です。</span>
       </div>
     </div>
-  </section>
 
-  <section id="profile" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-brand-accent to-slate-800 flex items-center justify-center text-4xl text-white font-serif font-bold shadow-xl flex-shrink-0">
-          TC
-        </div>
-        <div class="space-y-4 text-left">
-          <div class="inline-block text-xs font-mono text-brand-accent uppercase tracking-wider border border-brand-accent/30 px-3 py-1 rounded-full">
-            AI業務自動化（AX）アーキテクト
+    <div class="mb-16">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 text-center mb-2">OUTPUT CHANNELS</h2>
+      <h3 class="text-xl md:text-2xl font-bold font-serif-jp text-center text-slate-900 mb-8">
+        1回の入力で自動生成される「8つの出力フォーマット」
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">X</div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">1. X（旧Twitter）投稿案</div>
+            <div class="text-xs text-slate-500">140字以内の要約・拡散型ポスト</div>
           </div>
-          <h3 class="text-2xl font-bold font-serif">千田 朋明 / Tomoaki Chida</h3>
-          <p class="text-sm text-brand-textMuted leading-relaxed">
-            IT・デジタルマーケティング領域にて15年以上の実務経験を保有。プログラミングのバックボーンを活かした高度な業務構造化と、最新AI（LLM）×ノーコード連携による自動化設計を強みとする。<br>
-            自社でも営業・リサーチ・データ処理の工数を8割削減しており、机上の空論ではない「現場で確実に動く実務システム」の構築と定着を一貫して提供している。
-          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fas fa-at"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">2. Threads 投稿案</div>
+            <div class="text-xs text-slate-500">共感を呼ぶエッセイ・ドキュメンタリー調</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fas fa-book-open"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">3. note 構成案</div>
+            <div class="text-xs text-slate-500">タイトル・目次・導入文の骨子</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-700 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">4. LinkedIn（日英両対応）</div>
+            <div class="text-xs text-slate-500">ビジネス層・海外向けインサイト投稿</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fab fa-facebook-f"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">5. Facebook 投稿案</div>
+            <div class="text-xs text-slate-500">経営者・実名コミュニティ向け文章</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fab fa-youtube"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">6. YouTube長尺動画 台本原稿</div>
+            <div class="text-xs text-slate-500">オープニングからエンディングまでの構成</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-rose-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fas fa-video"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">7. ショート動画（TikTok/Shorts）台本</div>
+            <div class="text-xs text-slate-500">冒頭3秒のフックと30〜60秒の縦型脚本</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0"><i class="fas fa-paper-plane"></i></div>
+          <div>
+            <div class="font-bold text-sm text-slate-800">8. BtoB個別アプローチメール</div>
+            <div class="text-xs text-slate-500">返信率を高める個社提案メッセージ</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="contact" class="py-24 px-6 hero-glow border-t border-white/5">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">CONTACT</h2>
-      <p class="text-3xl md:text-4xl font-bold font-serif mb-6">無料AX診断・お問い合わせ</p>
-      <p class="text-brand-textMuted text-sm md:text-base mb-10 leading-relaxed">
-        「自社のこの作業は自動化できるか？」「補助金の対象になるか知りたい」など、まずはお気軽にご相談ください。
+    <div class="bg-slate-100 rounded-2xl p-6 md:p-8 mb-16 border border-slate-200 text-center">
+      <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">OPERATED BY</h3>
+      <div class="text-lg font-bold font-serif-jp text-slate-900 mb-3">Connect Marketing / 千田 朋明</div>
+      <p class="text-xs md:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+        IT・Webマーケティング歴15年以上。現場の手作業を徹底的に削減する「AI業務自動化（AX）」を自社実践・提供。<br>
+        Google Workspaceと最新AIを連携させ、毎日の営業・リサーチ・データ入力作業を8割削減する仕組みづくりを支援しています。
       </p>
-
-      <form class="glass-card p-8 rounded-3xl text-left space-y-5" onsubmit="event.preventDefault(); alert('お問い合わせを受け付けました。担当者よりご連絡いたします。');">
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">貴社名 / 屋号 <span class="text-brand-accent">*</span></label>
-          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="株式会社〇〇">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">お名前 <span class="text-brand-accent">*</span></label>
-          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="山田 太郎">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">メールアドレス <span class="text-brand-accent">*</span></label>
-          <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="info@example.com">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">ご相談内容</label>
-          <select class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent">
-            <option>まずは無料の業務診断を受けたい</option>
-            <option>Google Workspace × AI 現場自動化について</option>
-            <option>BtoB営業・リサーチ自動化OSについて</option>
-            <option>自治体DX補助金の対象確認</option>
-            <option>その他・提携相談</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-300 mb-2">現在のお困りごと（任意）</label>
-          <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="例：毎日の営業リスト作成や問い合わせ対応に時間がかかっている"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-black font-bold py-4 rounded-xl shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-[1.01]">
-          無料で相談してみる
-        </button>
-      </form>
     </div>
-  </section>
 
-  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-brand-textMuted">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="text-sm font-bold font-serif tracking-widest text-white">CONNECT MARKETING</div>
-      <div>© 2026 Connect Marketing. All Rights Reserved.</div>
-      <div class="flex space-x-6">
-        <a href="#problems" class="hover:text-white transition">現場の課題</a>
-        <a href="#solutions" class="hover:text-white transition">ソリューション</a>
-        <a href="./en/" class="text-brand-accent hover:underline">English</a>
-      </div>
+    <div class="text-center">
+      <a href="#download" class="inline-block w-full max-w-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-xl text-base shadow-lg transition transform active:scale-95">
+        無料でGemプロンプトを受け取る
+      </a>
     </div>
+
+  </main>
+
+  <footer class="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+    <p>© 2026 Connect Marketing. All Rights Reserved.</p>
   </footer>
 
 </body>
