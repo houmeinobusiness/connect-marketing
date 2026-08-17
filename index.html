@@ -1,229 +1,325 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html lang="ja" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コネクトマーケティング | 最新AI×業務自動化（AX）コンサルティング</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Marketing | 課題解決輸出 ＆ 次世代AI自律駆動（AX）総合商社</title>
+  <meta name="description" content="課題先進国・日本の現場AX（AI業務変革）を世界へ輸出する。自社3大自律システム（Alpha/Beta/Gamma）とフィジカルAI・ブロックチェーン決済プロトコルによる次世代コングロマリット。">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#060B13',
+              card: '#0D1522',
+              cardBorder: 'rgba(255, 255, 255, 0.08)',
+              accent: '#10B981', // Emerald
+              accentHover: '#059669',
+              gold: '#D4AF37',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+            serif: ['"Shippori Mincho"', 'serif'],
+          }
         }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
-        }
-    </style>
+  <style>
+    body {
+      background-color: #060B13;
+      color: #F8FAFC;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), transparent 70%),
+                  radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08), transparent 60%);
+    }
+    .glass-card {
+      background: rgba(13, 21, 34, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-4px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
 </head>
+<body class="selection:bg-brand-accent selection:text-black">
 
-<body class="text-slate-900 bg-slate-50 antialiased">
+  <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all">
+    <div class="flex items-center space-x-3">
+      <a href="#" class="text-xl md:text-2xl font-bold tracking-widest font-serif text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent animate-pulse"></span>
+        CONNECT MARKETING
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-textMuted">
+      <a href="#philosophy" class="hover:text-white transition">理念（課題解決輸出）</a>
+      <a href="#systems" class="hover:text-white transition">3大自律システム</a>
+      <a href="#vision" class="hover:text-white transition">2030ビジョン</a>
+      <a href="#architect" class="hover:text-white transition">アーキテクト</a>
+      <a href="#contact" class="hover:text-white transition">提携・相談</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <a href="./en/" class="text-xs font-mono px-3 py-1.5 rounded border border-white/20 text-white hover:border-brand-accent transition">
+        EN ➔
+      </a>
+      <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs md:text-sm px-5 py-2.5 rounded-full shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-105">
+        お問い合わせ
+      </a>
+    </div>
+  </header>
 
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold tracking-tight text-blue-900">CONNECT MARKETING</span>
-                <span class="text-[10px] text-slate-500 tracking-widest font-medium">AUTOMATION & MARKETING EXPERT</span>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="./en/" class="text-xs font-bold text-slate-600 hover:text-blue-900 px-2.5 py-1.5 rounded-lg border border-slate-300 hover:border-blue-900 transition">
-                    EN
-                </a>
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded-xl transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base">
-                    無料スポットコンサル申込
-                </a>
-            </div>
+  <section class="relative pt-36 pb-20 md:pt-48 md:pb-36 px-6 hero-glow overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-brand-accent/30 text-brand-accent text-xs md:text-sm font-medium mb-8">
+        <i class="fas fa-shield-halved"></i>
+        <span>Autonomous Business Transformation & Global Trade OS</span>
+      </div>
+      
+      <h1 class="text-3xl md:text-6xl font-bold tracking-tight leading-tight md:leading-snug mb-8 font-serif">
+        労働集約の終焉。<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-brand-accent">
+          現場AXから、世界の課題解決へ。
+        </span>
+      </h1>
+      
+      <p class="text-base md:text-xl text-brand-textMuted max-w-3xl mx-auto mb-12 leading-relaxed">
+        日本は世界最速で人口減少と人手不足に直面する「極限の課題先進国」。<br class="hidden md:inline">
+        過酷な国内現場で鍛え上げた自社AXシステムとインテントデータ基盤を武器に、世界のサプライチェーンを自律化する次世代型AI総合商社。
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">80%+</div>
+          <div class="text-xs text-brand-textMuted">現場定型工数削減率</div>
         </div>
-    </header>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">Zero-Code</div>
+          <div class="text-xs text-brand-textMuted">論理設計アーキテクチャ</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">USD-Yield</div>
+          <div class="text-xs text-brand-textMuted">外貨獲得＆為替アービトラージ</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">2029 HD</div>
+          <div class="text-xs text-brand-textMuted">無借金プライベートHD化必達</div>
+        </div>
+      </div>
 
-    <section class="hero-gradient text-white py-24 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cube.png')] opacity-10"></div>
-        <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
-            <span class="inline-block bg-blue-500/20 text-blue-300 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-blue-400/30 tracking-wide">
-                15年の実績 × 最新AI・ノーコード駆動
-            </span>
-            <h1 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-snug">
-                絵に描いた餅で終わらせない。<br>
-                AI×プロの目で行う<span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">「実働型AX（業務自動化）」</span>＆ SNSインハウス化支援
-            </h1>
-            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                その手作業、AIで完全無人化しませんか？<br>
-                15年のIT・マーケティング実績と、自社で検証・実践済みのAI自動化ノウハウ（工数8割削減）を貴社へそのまま移植。現場のオペレーションを完全自動化し、自走できる組織づくりを伴走サポートします。
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#systems" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold px-8 py-4 rounded-full shadow-lg shadow-brand-accent/25 transition-all transform hover:scale-105">
+          3大自律システムを見る
+        </a>
+        <a href="#philosophy" class="glass-card hover:bg-white/10 text-white font-medium px-8 py-4 rounded-full transition-all">
+          課題解決輸出構想とは
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy" class="py-24 px-6 border-t border-white/5 relative">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">MISSION & PHILOSOPHY</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">日本の「課題」は、世界の「輸出品」になる。</p>
+      </div>
+
+      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
+        <p class="text-white font-semibold text-xl font-serif">
+          「少子高齢化、人手不足、事業承継難。日本が直面する壁は、未来の世界が直面する壁そのものである。」
+        </p>
+        <p>
+          私たちは、地方の中小企業や町工場が抱える深刻な人手不足を、単なるツールの導入ではなく「自社AX（AI業務変革）アーキテクチャ」によって根本から解体・自律化してきました。
+        </p>
+        <p>
+          国内の極限の現場で人手を8割削り、少人数で高生産性を叩き出すために鍛え上げられたオペレーションは、今後まったく同じ課題を迎える欧米・アジア諸国にとって最も価値ある<strong class="text-brand-accent">『最大の輸出品（課題解決輸出）』</strong>となります。
+        </p>
+        <p class="border-l-2 border-brand-gold pl-4 text-slate-200">
+          「ドルで稼ぎ、円で還元する」。グローバル市場から得た外貨とテクノロジーを日本の地方現場へ還流させ、持続可能な自律型産業エコシステムを再構築します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="systems" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">CORE OPERATING ENGINES</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">Connect Marketing を駆動する3大自律システム</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">System Alpha 3.0</span>
+              <i class="fas fa-radar text-blue-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif mb-3">Intelligent Outbound OS</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              47都道府県のDX補助金自動照合 ✕ Indeed等の求人ペインシグナル検知。超個社提案を完全自動生成し、全国の現場へAXを即時インストールする実証エンジン。
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg py-4 px-8 rounded-xl transition shadow-lg transform hover:-translate-y-0.5">
-                    無料スポットコンサルを予約する
-                </a>
-                <a href="#solutions" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-bold text-lg py-4 px-8 rounded-xl transition border border-slate-700 backdrop-blur">
-                    ソリューションを見る
-                </a>
-            </div>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-blue-300 font-mono">
+            Key: 連合データハブ / インテント検知
+          </div>
         </div>
-    </section>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 tracking-tight">御社の中核リソース、こんな「手作業」に奪われていませんか？</h2>
-            <p class="text-slate-500 text-center mb-12">自動化（AX）が進んでいない組織では、毎日多くの利益がノンコア業務に消えています。</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">🚨</div>
-                    <h3 class="font-bold text-lg mb-2">営業リスト・下書きの作成</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">毎日Webで検索し、会社情報をコピペして、個社ごとの営業メールを作成する作業に何時間も浪費している。</p>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">🚨</div>
-                    <h3 class="font-bold text-lg mb-2">製造ラインの目視検査・検品</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">工場の外観・目視検査が完全に人手頼みになっており、人手不足の深刻化や、ベテラン退職による技術伝承に頭を抱えている。</p>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">🚨</div>
-                    <h3 class="font-bold text-lg mb-2">成果に繋がらないSNS運用・内製化の壁</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">外部のSNS代行へ頼っても成果に繋がらず、社内で運用しようにもリソースやノウハウが不足し、自社で継続・内製化できる仕組みが作れていない。</p>
-                </div>
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">System Beta</span>
+              <i class="fas fa-network-wired text-rose-400 text-xl"></i>
             </div>
+            <h3 class="text-xl font-bold font-serif mb-3">LINE-AX & Operator Hub</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              インハウス育成プログラムにより、外部人材を「AI操縦士」として組織化。固定人件費ゼロで現場制作・運用・データ収集を支える分散型パートナーネットワーク。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-rose-300 font-mono">
+            Key: 人材インハウス化 / 分散型労働力
+          </div>
         </div>
-    </section>
 
-    <section class="py-20 bg-slate-100 border-y border-slate-200">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <span class="block text-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-2">WHY CHOOSE US</span>
-            <h2 class="text-3xl font-bold text-center mb-16 tracking-tight">Connect Marketingが選ばれる3つの理由</h2>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-blue-600 font-bold font-mono text-2xl mb-2">01</div>
-                    <h3 class="font-bold text-lg mb-3 text-slate-900">自社で使い倒している「生の実践ノウハウ（Dogfooding）」</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">単なるツールの解説ではありません。自社の営業・SNS運用・データ収集をAI×Makeで完全自動化（AX）しているリアルな成果・仕組みをそのまま提供するため、圧倒的な説得力と実現性があります。</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-blue-600 font-bold font-mono text-2xl mb-2">02</div>
-                    <h3 class="font-bold text-lg mb-3 text-slate-900">現場の「手作業・オペレーション」を直接無人化</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">難しいAI理論ではなく、現場スタッフが毎日行っている「Excel転記」「目視チェック」「SNS投稿」「顧客への連絡」といった具体的な手作業（オペレーション）のボトルネックを特定し、AIで無人化します。</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-blue-600 font-bold font-mono text-2xl mb-2">03</div>
-                    <h3 class="font-bold text-lg mb-3 text-slate-900">特定ツールに縛られない「ベンダーフリー設計」</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Dify、Make、Studio、Google Antigravity等、特定ベンダーに依存せず、貴社の課題とご予算に合わせて最も費用対効果の高いノーコード・AIツールをオーダーメイドで組み合わせます。</p>
-                </div>
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-brand-accent bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">System Gamma</span>
+              <i class="fas fa-globe text-brand-accent text-xl"></i>
             </div>
+            <h3 class="text-xl font-bold font-serif mb-3">Global Intelligent Direct Trade</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              地方優良メーカーの海外バイヤー逆引き開拓 ✕ ドル建て決済（Wise/USDC）。自社物販からBtoB輸出代行、海外SaaSの日本進出（GTM）まで外貨を直接獲得。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-brand-accent font-mono">
+            Key: 越境直販 / 為替アービトラージ
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="solutions" class="py-20 bg-slate-900 text-white relative">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <span class="block text-center text-blue-400 font-bold text-sm tracking-widest uppercase mb-2">SOLUTIONS</span>
-            <h2 class="text-3xl font-bold text-center mb-16 tracking-tight">Connect Marketingが提供する3つの強力な武器</h2>
+  <section id="vision" class="py-24 px-6 border-t border-white/5 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3 font-mono">2030+ FUTURE INFRASTRUCTURE</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">全産業のフィジカルAI ✕ ブロックチェーン自律経済圏</p>
+      </div>
 
-            <div class="space-y-12">
-                <div class="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700/50 shadow-xl flex flex-col md:flex-row gap-8 items-start">
-                    <div class="bg-blue-600 text-white p-4 rounded-2xl text-2xl font-bold font-mono">01</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold mb-3 text-orange-400">B2Bアウトバウンド営業・バックオフィスAX（自動化）パッケージ</h3>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            MakeとDify（最新生成AI）をシームレスに連携。Google Maps API等からターゲット業界の会社データ・URLを自動スクレイピングし、AIが個社ごとの事業内容を瞬時に分析。最適な営業メールの下書きを毎日スプレッドシートやGmailへ全自動で量産・ストックする無人営業ラインを構築します。
-                        </p>
-                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
-                            <li>ターゲットリストの自動抽出（Google Maps / 各種プラットフォーム連携）</li>
-                            <li>自社実績（RAGデータ）を完全学習した高度なAIプロンプト設計</li>
-                            <li>24時間365日、全自動スケジュール運転システム</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700/50 shadow-xl flex flex-col md:flex-row gap-8 items-start">
-                    <div class="bg-blue-600 text-white p-4 rounded-2xl text-2xl font-bold font-mono">02</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold mb-3 text-emerald-400">Google Cloud連携・外観目視検査AI導入支援（製造業特化）</h3>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            Google Cloudが誇る最先端の製造業特化型AI「Vertex AI Vision (Visual Inspection AI)」の実機検証・モデル構築を支援。わずか数十枚の画像データから、肉眼では見落としそうな0.01mmレベルの微細なキズ、へこみ、異物、組み付け不良をミリ秒単位で超高精度検出する検品自動化システムを開発します。
-                        </p>
-                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
-                            <li>少ないサンプル画像（正常・異常）から最短2週間でのPoC（概念実証）モデル構築</li>
-                            <li>工場のカメラ・センサーデータとMake/Difyを組み合わせた現場最適化システム</li>
-                            <li>人手不足解消と検品コストの大幅削減（補助金を活用したスマート導入設計）</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700/50 shadow-xl flex flex-col md:flex-row gap-8 items-start">
-                    <div class="bg-blue-600 text-white p-4 rounded-2xl text-2xl font-bold font-mono">03</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-400">SNSマルチチャネル自動化＆インハウス化（内製化）コンサルティング ＆ 高CVR・Meta広告最適化LP制作</h3>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            外部依存の運用から脱却し、社内で継続的に成果を出す「SNS運用の完全インハウス化（内製化）」を徹底支援。1本の1行メモからX・Threads・Instagram・LinkedInへ全自動展開する自社システム（System 2）をはじめ、最新AIを活用した投稿作成・自動化（AX）の仕組みを社内に構築します。さらに、InstagramやMeta広告等からの流入を前提とし、ユーザーの「心理感情ロードマップ」から逆算した圧倒的なキャッチコピー作成・構成案で高精度なLP（ランディングページ）を構築。Studio等のノーコードツールを活用し、納品後も貴社内で直感的にABテストや改善運用ができる体制を実現します。
-                        </p>
-                        <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
-                            <li>AIを活用したSNSコンテンツ生成・投稿管理のインハウス（内製化）仕組み構築</li>
-                            <li>離脱率を極限まで下げるファーストビューと言語化設計</li>
-                            <li>スマホ画面に完全に追従する、摩擦のない高CVR（応募・集客率）CTA設計</li>
-                            <li>自社で即時更新・運用改善ができる詳細なコンポーネント設計＆運用マニュアル共有</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-accent">
+          <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-xl mb-6">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3">フィジカルAI（ロボティクス）× 現場自動化</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            ソフトウェアの自動化に留まらず、買収・支援先の工場、物流、一次産業現場へ協働ロボットやエッジAIセンサーを統合。日本の人手不足現場を「完全省人化ファクトリー」へと再生し、世界標準パッケージとして輸出します。
+          </p>
         </div>
-    </section>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
-            <span class="text-blue-600 font-bold text-sm tracking-widest uppercase mb-2 block">PROFILE</span>
-            <h2 class="text-3xl font-bold mb-12 tracking-tight">代表プロフィール</h2>
-            <div class="bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-sm text-left">
-                <div class="flex flex-col md:flex-row gap-6 items-start md:items-center mb-6">
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-900">千田 朋明</h3>
-                        <p class="text-sm text-blue-700 font-medium">コネクトマーケティング 代表 / AIコンサルタント・マーケター</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                    ゲームプログラミング出身のバックボーンを持ち、IT・デジタルマーケティング領域において15年以上のキャリアを有する。プログラミングの深い知見に基づく高度な論理的思考力を強みとし、過去には上場企業と提携したビジネススクールの立ち上げから運営、そして自社株式の売却（M&Aバイアウト）を完全成功させた確かな事業開発実績を持つ。
-                </p>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    現在は、中小企業向けのB2Bマーケティング支援、SNS運用のインハウス（内製化）コンサルティングに加え、自社で実証したDifyやMake、Google Cloud（Vertex AI）などの最先端AI技術を駆使し、手作業を徹底排除して利益率を最大化させる「業務自動化（AX）」の導入を先導している。
-                </p>
-            </div>
+        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-gold">
+          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-xl mb-6">
+            <i class="fas fa-coins"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3">自律型「AIエージェント間決済（A2A Settlement）」</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            レガシーEDIを排除し、ステーブルコイン（USDC等）を用いた商流・金流の同時完結（DvP）を確立。AIエージェント同士が自律的に条件交渉・受発注を行い、スマートコントラクトでマイクロ決済を即時処理する基幹プロトコルを掌握します。
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="text-3xl font-bold text-center mb-2 tracking-tight">無料AX診断・スポットコンサルティング</h2>
-            <p class="text-sm text-slate-500 text-center mb-10">現在は専用予約フォームにて、個別のシステムデモ・自動化相談を承っております。</p>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
-                <p class="mb-4 text-sm text-slate-700 font-medium leading-relaxed">
-                    「AIをどう使えばいいか分からない」「自社のどの業務が自動化できるか知りたい」という段階で構いません。<br>
-                    まずは『無料AX診断・スポットコンサル（30分）』にて、貴社の現在の手作業（オペレーション）をヒアリングし、AI×Makeによる簡易改善ロードマップをご提示いたします。
-                </p>
-                <p class="mb-6 text-xs text-slate-500">
-                    ※B2Bアウトバウンド営業 AX自動化システムの実際の挙動や、目視検査AIの検証画面など、実機を交えたデモも可能です。
-                </p>
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="block w-full bg-blue-950 hover:bg-blue-900 text-white font-bold py-4 px-8 rounded-xl mb-4 text-center transition shadow-md">
-                    希望日時を選択して予約する
-                </a>
-                <div class="text-xs text-slate-400">
-                    ※順次対応を行っているため、現在のお受付枠には限りがございます。あらかじめご了承ください。
-                </div>
-            </div>
+  <section id="architect" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-32 h-32 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-brand-accent to-slate-800 flex items-center justify-center text-5xl text-white font-serif font-bold shadow-2xl flex-shrink-0">
+          TC
         </div>
-    </section>
+        <div class="space-y-4 text-left">
+          <div class="inline-block text-xs font-mono text-brand-accent uppercase tracking-wider border border-brand-accent/30 px-3 py-1 rounded-full">
+            Founder & Lead AX Architect
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold font-serif">千田 朋明 / Tomoaki Chida</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            IT・デジタルマーケティング歴15年以上。ゲームプログラミング出身の強固な論理思考力をバックボーンに、上場企業提携事業の立ち上げからM&Aバイアウトまでを主導。<br>
+            「コードを書かないアーキテクト」として、Google AntigravityやLLM推論環境を駆使し、自社およびクライアントの労働集約型業務を徹底的に自律化。2029年プライベート・ホールディングス設立を牽引する。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-slate-900 text-slate-500 text-xs py-8 text-center border-t border-slate-800">
-        <p>&copy; 2026 CONNECT MARKETING. All Rights Reserved.</p>
-    </footer>
+  <section id="contact" class="py-24 px-6 hero-glow border-t border-white/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">CONTACT & ALLIANCE</h2>
+      <p class="text-3xl md:text-4xl font-bold font-serif mb-6">次世代AXアーキテクチャの共創へ</p>
+      <p class="text-brand-textMuted text-sm md:text-base mb-10 leading-relaxed">
+        自治体DX補助金を活用した現場AXの導入、地方金融機関・税理士アライアンス、越境BtoB輸出代行、AI M&Aに関するご相談を承ります。
+      </p>
+
+      <form class="glass-card p-8 rounded-3xl text-left space-y-5" onsubmit="event.preventDefault(); alert('お問い合わせを受け付けました。専任アーキテクトよりご連絡いたします。');">
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">貴社名 / 組織名 <span class="text-brand-accent">*</span></label>
+          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="株式会社〇〇">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">お名前 <span class="text-brand-accent">*</span></label>
+          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="山田 太郎">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">メールアドレス <span class="text-brand-accent">*</span></label>
+          <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="info@example.com">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">ご相談種別</label>
+          <select class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent">
+            <option>現場AX・補助金自動照合パッケージ導入</option>
+            <option>地方金融機関・税理士アライアンス提携</option>
+            <option>System Gamma 越境直販・輸出代行</option>
+            <option>中小企業AI M&A・事業再生相談</option>
+            <option>その他・取材・提携</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">お問い合わせ内容</label>
+          <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="具体的な課題やご希望をご記入ください"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-black font-bold py-4 rounded-xl shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-[1.01]">
+          送信する
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-brand-textMuted">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm font-bold font-serif tracking-widest text-white">CONNECT MARKETING</div>
+      <div>© 2026 Connect Marketing. All Rights Reserved.</div>
+      <div class="flex space-x-6">
+        <a href="#philosophy" class="hover:text-white transition">理念</a>
+        <a href="#systems" class="hover:text-white transition">システム</a>
+        <a href="./en/" class="text-brand-accent hover:underline">English</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
-
 </html>
