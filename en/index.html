@@ -1,188 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Marketing | Global AI Automation & Japan Market Entry</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Marketing | Autonomous AX & Global Supply Chain Infrastructure</title>
+  <meta name="description" content="Exporting proven Japanese field automation to solve global labor shortages. AI-driven operating engines, Physical AI robotics, and Web3 A2A Settlement protocols.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#060B13',
+              card: '#0D1522',
+              cardBorder: 'rgba(255, 255, 255, 0.08)',
+              accent: '#10B981', // Emerald
+              accentHover: '#059669',
+              gold: '#D4AF37',
+              textMuted: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'sans-serif'],
+            serif: ['"Shippori Mincho"', 'Georgia', 'serif'],
+          }
         }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
-        }
-    </style>
+  <style>
+    body {
+      background-color: #060B13;
+      color: #F8FAFC;
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), transparent 70%),
+                  radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08), transparent 60%);
+    }
+    .glass-card {
+      background: rgba(13, 21, 34, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-4px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
 </head>
+<body class="selection:bg-brand-accent selection:text-black">
 
-<body class="text-slate-900 bg-slate-50 antialiased">
+  <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all">
+    <div class="flex items-center space-x-3">
+      <a href="#" class="text-xl md:text-2xl font-bold tracking-widest font-serif text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent animate-pulse"></span>
+        CONNECT MARKETING
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-textMuted">
+      <a href="#mission" class="hover:text-white transition">Mission</a>
+      <a href="#engines" class="hover:text-white transition">Autonomous OS</a>
+      <a href="#vision" class="hover:text-white transition">2030 Vision</a>
+      <a href="#architect" class="hover:text-white transition">Architect</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <a href="../" class="text-xs font-mono px-3 py-1.5 rounded border border-white/20 text-white hover:border-brand-accent transition">
+        JP ➔
+      </a>
+      <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs md:text-sm px-5 py-2.5 rounded-full shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-105">
+        Get in Touch
+      </a>
+    </div>
+  </header>
 
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold tracking-tight text-blue-900">CONNECT MARKETING</span>
-                <span class="text-[10px] text-slate-500 tracking-widest font-medium">GLOBAL AUTOMATION & MARKETING</span>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="../" class="text-xs font-bold text-slate-600 hover:text-blue-900 px-2.5 py-1.5 rounded-lg border border-slate-300 hover:border-blue-900 transition">
-                    JP
-                </a>
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-6 rounded-xl transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm md:text-base">
-                    Free Consultation
-                </a>
-            </div>
+  <section class="relative pt-36 pb-20 md:pt-48 md:pb-36 px-6 hero-glow overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-brand-accent/30 text-brand-accent text-xs md:text-sm font-medium mb-8">
+        <i class="fas fa-shield-halved"></i>
+        <span>Autonomous Business Transformation & Global Trade OS</span>
+      </div>
+      
+      <h1 class="text-3xl md:text-6xl font-bold tracking-tight leading-tight md:leading-snug mb-8 font-serif">
+        The End of Labor-Intensive Trade.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-brand-accent">
+          Proven Field AX, Exported to the World.
+        </span>
+      </h1>
+      
+      <p class="text-base md:text-xl text-brand-textMuted max-w-3xl mx-auto mb-12 leading-relaxed">
+        Japan is the world's most acute aging society facing extreme labor shortages. We forge battle-tested AI operating engines directly in demanding factories and enterprises, exporting hyper-autonomous architectures to global supply chains.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">80%+</div>
+          <div class="text-xs text-brand-textMuted">Operational Overhead Cut</div>
         </div>
-    </header>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-accent text-3xl font-bold font-mono mb-1">Zero-Code</div>
+          <div class="text-xs text-brand-textMuted">Pure Logic Architecture</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">Web3 / USDC</div>
+          <div class="text-xs text-brand-textMuted">Instant Settlement (DvP)</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-brand-gold text-3xl font-bold font-mono mb-1">2029 HD</div>
+          <div class="text-xs text-brand-textMuted">Zero-Debt Private Holding</div>
+        </div>
+      </div>
 
-    <section class="hero-gradient text-white py-24 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cube.png')] opacity-10"></div>
-        <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
-            <span class="inline-block bg-blue-500/20 text-blue-300 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-blue-400/30 tracking-wide">
-                15+ Years Track Record × Generative AI & AX
-            </span>
-            <h1 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight md:leading-snug">
-                Bridge Your Business to Japan with<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">AI Agents & Workflow Automation</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Empowering global companies to seamlessly expand into the Japanese market through localized growth marketing, custom AI agent architectures, and multi-app workflow automation (Make, Dify, Google Workspace).
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#engines" class="bg-brand-accent hover:bg-brand-accentHover text-black font-bold px-8 py-4 rounded-full shadow-lg shadow-brand-accent/25 transition-all transform hover:scale-105">
+          Explore Our 3 Engines
+        </a>
+        <a href="#mission" class="glass-card hover:bg-white/10 text-white font-medium px-8 py-4 rounded-full transition-all">
+          Why Japanese Field AX?
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="py-24 px-6 border-t border-white/5 relative">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">OUR MISSION</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">Turning Demographic Strain into Global Export Value.</p>
+      </div>
+
+      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
+        <p class="text-white font-semibold text-xl font-serif">
+          "The severe labor crisis Japan faces today is the exact reality the rest of the developed world will encounter tomorrow."
+        </p>
+        <p>
+          Rather than offering superficial software or temporary consulting, we architect end-to-end Autonomous Transformation (AX) systems. We eliminate 80% of repetitive operational tasks across Japanese precision manufacturing, logistics, and traditional enterprises.
+        </p>
+        <p>
+          These battle-tested models serve as <strong class="text-brand-accent">the ultimate export product</strong> for global enterprises seeking extreme margin expansion, direct cross-border procurement, and frictionless autonomous commerce.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="engines" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">AUTONOMOUS OPERATING ENGINES</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">Three Triangulated Ecosystems</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">System Alpha 3.0</span>
+              <i class="fas fa-radar text-blue-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif mb-3">Intelligent Outbound OS</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              Automated cross-matching of nationwide Japanese subsidies and hiring intent signals. Automatically drafts hyper-tailored B2B proposals with verified field evidence.
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg py-4 px-8 rounded-xl transition shadow-lg transform hover:-translate-y-0.5">
-                    Schedule a Consultation
-                </a>
-                <a href="#services" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-bold text-lg py-4 px-8 rounded-xl transition border border-slate-700 backdrop-blur">
-                    View Solutions
-                </a>
-            </div>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-blue-300 font-mono">
+            Focus: Federated Intent Hub & Intelligence
+          </div>
         </div>
-    </section>
 
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <span class="block text-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-2">SERVICES</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 tracking-tight">Core Solutions for Global Growth</h2>
-            <p class="text-slate-500 text-center mb-12">Accelerate your entry and optimize your operations in the Japanese market.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">🌐</div>
-                    <h3 class="font-bold text-lg mb-2">Japan Entry & Localization</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">Adapt your SaaS, AI products, and marketing assets specifically for the Japanese audience and business culture.</p>
-                    <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
-                        <li>Market Research & Analysis</li>
-                        <li>Japanese Copywriting & UI/UX</li>
-                        <li>Local Strategic Partnerships</li>
-                    </ul>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">⚡</div>
-                    <h3 class="font-bold text-lg mb-2">AI & Workflow Automation (AX)</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">Build custom AI pipelines to automate lead generation, customer communication, and internal back-office tasks.</p>
-                    <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
-                        <li>Dify / OpenAI Custom AI Agents</li>
-                        <li>Make / Webhook Multi-App Funnels</li>
-                        <li>Google Workspace AI Integration</li>
-                    </ul>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <div class="text-3xl mb-4">📈</div>
-                    <h3 class="font-bold text-lg mb-2">Social Media & Growth Marketing</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">Execute high-converting SNS strategies tailored for Japanese consumers across major local channels.</p>
-                    <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
-                        <li>X (Twitter), Instagram & YouTube</li>
-                        <li>Automated LINE Messaging Funnels</li>
-                        <li>High-CVR Landing Page Creation</li>
-                    </ul>
-                </div>
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">System Beta</span>
+              <i class="fas fa-network-wired text-rose-400 text-xl"></i>
             </div>
+            <h3 class="text-xl font-bold font-serif mb-3">Human-in-the-Loop Network</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              Scalable, zero-fixed-cost human operator infrastructure. Trained AI pilots handle high-touch tasks and quality assurance seamlessly in parallel.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-rose-300 font-mono">
+            Focus: Distributed AI Operator Workforce
+          </div>
         </div>
-    </section>
 
-    <section class="py-20 bg-slate-100 border-y border-slate-200">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <span class="block text-center text-blue-600 font-bold text-sm tracking-widest uppercase mb-2">CASE STUDIES</span>
-            <h2 class="text-3xl font-bold text-center mb-16 tracking-tight">Featured Track Record</h2>
-
-            <div class="space-y-8">
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
-                    <div class="text-blue-600 font-bold font-mono text-xl md:w-32">CASE 01</div>
-                    <div class="flex-1">
-                        <h3 class="font-bold text-lg mb-2 text-slate-900">Large-Scale Event Ticketing & Data System</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Directed and engineered a high-concurrency ticket issuance and data processing pipeline for a major music festival with 50,000+ attendees.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
-                    <div class="text-blue-600 font-bold font-mono text-xl md:w-32">CASE 02</div>
-                    <div class="flex-1">
-                        <h3 class="font-bold text-lg mb-2 text-slate-900">Automated LINE API & CRM Architecture</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Constructed a cost-effective, automated lead capture and AI-driven response system utilizing LINE Messaging API, Make, and Google Sheets.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-start">
-                    <div class="text-blue-600 font-bold font-mono text-xl md:w-32">CASE 03</div>
-                    <div class="flex-1">
-                        <h3 class="font-bold text-lg mb-2 text-slate-900">Business School Venture & Successful Exit</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Co-founded a business training academy in partnership with a publicly traded company, successfully achieving a 100% share acquisition (M&A buyout).</p>
-                    </div>
-                </div>
+        <div class="glass-card p-8 rounded-3xl glass-card-hover flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono text-brand-accent bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">System Gamma</span>
+              <i class="fas fa-globe text-brand-accent text-xl"></i>
             </div>
+            <h3 class="text-xl font-bold font-serif mb-3">Global Direct Trade & GTM</h3>
+            <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+              Direct B2B procurement pipelines connecting top Japanese manufacturers with global buyers. Zero-friction multi-currency (USD, Stablecoin) cross-border settlements.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/5 text-xs text-brand-accent font-mono">
+            Focus: Direct Trade & Arbitrage Yield
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
-            <span class="text-blue-400 font-bold text-sm tracking-widest uppercase mb-2 block">PROFILE</span>
-            <h2 class="text-3xl font-bold mb-12 tracking-tight">Founder Profile</h2>
-            <div class="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700/50 shadow-xl text-left">
-                <div class="flex flex-col md:flex-row gap-6 items-start md:items-center mb-6">
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Tomoaki Chida</h3>
-                        <p class="text-sm text-blue-400 font-medium">Founder & Principal AI / Marketing Consultant</p>
-                    </div>
-                </div>
-                <p class="text-sm text-slate-300 leading-relaxed mb-6">
-                    Serial entrepreneur and IT consultant with over 15 years of experience in software development, digital marketing, and business automation in Tokyo, Japan.
-                </p>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                    Proven track record in building complex software architectures and launching successful ventures. Currently helping global and domestic enterprises drive revenue growth in Japan through Generative AI implementation, Make/Dify automation, and multi-channel marketing strategies.
-                </p>
-            </div>
+  <section id="vision" class="py-24 px-6 border-t border-white/5 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3 font-mono">2030+ HORIZON</h2>
+        <p class="text-2xl md:text-4xl font-bold font-serif">Physical AI & Agent-to-Agent (A2A) Protocols</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-accent">
+          <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-xl mb-6">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3">Physical AI & Robotics Deployment</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            Extending software AX into hardware reality. We integrate collaborative robotics and edge vision sensors into acquired plants and logistics hubs, turning understaffed sites into autonomous micro-factories.
+          </p>
         </div>
-    </section>
 
-    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="text-3xl font-bold text-center mb-2 tracking-tight">Schedule a Free Consultation</h2>
-            <p class="text-sm text-slate-500 text-center mb-10">Discuss your expansion or automation goals with us directly.</p>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
-                <p class="mb-6 text-sm text-slate-700 font-medium leading-relaxed">
-                    Book a 30-minute online discovery call. We’ll review your current goals, evaluate technical feasibility, and propose an actionable roadmap for the Japanese market.
-                </p>
-                <a href="https://app.spirinc.com/t/xwz6_57d6l7DgFK1Nnn61/as/w69GUP_Mxr1-CAfePg7Fo/confirm"
-                    target="_blank" rel="noopener noreferrer"
-                    class="block w-full bg-blue-950 hover:bg-blue-900 text-white font-bold py-4 px-8 rounded-xl mb-4 text-center transition shadow-md">
-                    Select Time & Book Call
-                </a>
-            </div>
+        <div class="glass-card p-8 rounded-3xl border-t-2 border-brand-gold">
+          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-xl mb-6">
+            <i class="fas fa-coins"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3">Autonomous A2A Settlement Protocol</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            Eliminating legacy EDI and SWIFT friction. Autonomous AI agents negotiate procurement terms and trigger atomic, real-time stablecoin (USDC) settlements via smart contracts (DvP).
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-slate-900 text-slate-500 text-xs py-8 text-center border-t border-slate-800">
-        <p>&copy; 2026 CONNECT MARKETING. All Rights Reserved.</p>
-    </footer>
+  <section id="architect" class="py-24 px-6 bg-brand-card/40 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-32 h-32 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-brand-accent to-slate-800 flex items-center justify-center text-5xl text-white font-serif font-bold shadow-2xl flex-shrink-0">
+          TC
+        </div>
+        <div class="space-y-4 text-left">
+          <div class="inline-block text-xs font-mono text-brand-accent uppercase tracking-wider border border-brand-accent/30 px-3 py-1 rounded-full">
+            Founder & Lead AX Architect
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold font-serif">Tomoaki Chida</h3>
+          <p class="text-sm text-brand-textMuted leading-relaxed">
+            15+ years of digital marketing and systems architecture. Rooted in game logic programming, Chida has previously led enterprise ventures from zero to successful M&A buyout.<br>
+            As a "Zero-Code Architect," he designs self-sustaining corporate operating systems powered by Google Antigravity and LLM agentic pipelines, steering Connect Marketing toward a premier private holding corporation by 2029.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 hero-glow border-t border-white/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-3 font-mono">GLOBAL INQUIRIES</h2>
+      <p class="text-3xl md:text-4xl font-bold font-serif mb-6">Partner with the Autonomous Future</p>
+      <p class="text-brand-textMuted text-sm md:text-base mb-10 leading-relaxed">
+        Direct B2B procurement, Japanese Market GTM representation, or Strategic AX alliance inquiries.
+      </p>
+
+      <form class="glass-card p-8 rounded-3xl text-left space-y-5" onsubmit="event.preventDefault(); alert('Thank you. Our lead architect will get back to you shortly.');">
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">Company Name <span class="text-brand-accent">*</span></label>
+          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="Global Corp Inc.">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">Your Name <span class="text-brand-accent">*</span></label>
+          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="John Doe">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">Corporate Email <span class="text-brand-accent">*</span></label>
+          <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="john@example.com">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">Inquiry Type</label>
+          <select class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent">
+            <option>Cross-Border Procurement (System Gamma)</option>
+            <option>Japan Market Entry (GTM Representation)</option>
+            <option>Autonomous AX Architecture Partnership</option>
+            <option>M&A / Supply Chain Inquiries</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-300 mb-2">Message</label>
+          <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent" placeholder="Please outline your project scope or business objectives."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-black font-bold py-4 rounded-xl shadow-lg shadow-brand-accent/20 transition-all transform hover:scale-[1.01]">
+          Submit Inquiry
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-12 px-6 border-t border-white/5 text-center text-xs text-brand-textMuted">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm font-bold font-serif tracking-widest text-white">CONNECT MARKETING</div>
+      <div>© 2026 Connect Marketing. All Rights Reserved.</div>
+      <div class="flex space-x-6">
+        <a href="#mission" class="hover:text-white transition">Mission</a>
+        <a href="#engines" class="hover:text-white transition">Engines</a>
+        <a href="../" class="text-brand-accent hover:underline">日本語</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
-
 </html>
