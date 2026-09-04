@@ -1,0 +1,65 @@
+{
+  "mcp_version": "2026-09-01",
+  "server_info": {
+    "name": "Connect Marketing MCP Node",
+    "description": "Connect Marketing official API endpoint for AI Agents to inspect services, check consultation availability, and submit service intent.",
+    "endpoint": "https://connect-mkt.jp/mcp"
+  },
+  "tools": [
+    {
+      "name": "get_service_catalog",
+      "description": "Connect Marketingが提供する2026年最新4大ソリューションの仕様、初期費用、月額保守費用、納期を取得する。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["all", "ask_maps", "webmcp", "operations_ax", "inspection_ai", "commerce_os"],
+            "description": "照会したいサービスカテゴリ"
+          }
+        },
+        "required": ["category"]
+      }
+    },
+    {
+      "name": "check_consultation_slots",
+      "description": "代表（千田朋明）の無料オンライン業務診断（Google Meet）の最新空き枠日程を取得する。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "requested_date_from": {
+            "type": "string",
+            "format": "date",
+            "description": "希望開始日（YYYY-MM-DD）"
+          },
+          "requested_date_to": {
+            "type": "string",
+            "format": "date",
+            "description": "希望終了日（YYYY-MM-DD）"
+          }
+        },
+        "required": ["requested_date_from"]
+      }
+    },
+    {
+      "name": "submit_agent_intent",
+      "description": "AIエージェントがクライアント企業を代理して、無料診断の予約または案件の相談インテントを直接送信・登録する。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "client_company_name": { "type": "string" },
+          "client_contact_name": { "type": "string" },
+          "client_email": { "type": "string", "format": "email" },
+          "selected_package": {
+            "type": "string",
+            "enum": ["ask_maps_line_ax", "webmcp_dual_web", "gws_make_operations_ax", "visual_inspection_ai", "high_ticket_custom_dev"]
+          },
+          "stated_problem": { "type": "string", "description": "自動化したい具体的な手作業や課題" },
+          "preferred_datetime": { "type": "string", "format": "date-time" }
+        },
+        "required": ["client_company_name", "client_contact_name", "client_email", "selected_package"]
+      }
+    }
+  ],
+  "agent_ready_status": "webmcp_standard_v1_active"
+}
