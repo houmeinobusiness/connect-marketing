@@ -1,0 +1,16 @@
+{
+  "emailFormatRejected": false,
+  "consentRequired": true,
+  "afterSubmissionText": "1件の質問に対応が必要です。\n集客・採用のためのLP制作、広告運用、Web施策の改善、業務自動化など、お困りごとをお聞かせください。具体的なご依頼だけでなく、「何から始めればよいか分からない」という段階でもご相談いただけます。\n入力項目\nお名前（必須）\n*\n会社名・屋号（任意）\nメールアドレス（必須）\n*\nご相談内容（必須）\n*\nご相談の詳細（必須）\n*\n個人情報の取り扱いへの同意（必須）\n*\n［プライバシーポリシー］を確認し、個人情報の取り扱いに同意します。\n相談内容を送信する\nTallyで作成",
+  "postResponses": [
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/events",
+      "status": 200
+    },
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/events",
+      "status": 200
+    }
+  ],
+  "notificationDelivery": "未検証（管理画面・通知先メール未確認）"
+}
