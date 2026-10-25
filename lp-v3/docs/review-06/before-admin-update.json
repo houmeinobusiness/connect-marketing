@@ -1,0 +1,12 @@
+{
+  "emailInputPresent": false,
+  "publicInputTypes": [
+    "text",
+    "text",
+    "text",
+    "checkbox"
+  ],
+  "privacyUrlPresent": true,
+  "testSubmissionCount": 0,
+  "reason": "公開フォームにメール入力要素なし。Email検証と実送信再テストは設定反映待ち。"
+}
