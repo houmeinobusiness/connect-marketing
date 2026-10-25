@@ -1,25 +1,7 @@
-<footer><div class="wrap footer-inner"><a class="brand" href="#top">Connect Marketing</a><a href="https://note.com/houmeinobusiness" target="_blank" rel="noopener noreferrer">代表のnote ↗</a><small>© {new Date().getFullYear()} Connect Marketing</small></div></footer><a hidden class="mobile-cta button" href="#contact">まずは相談する <span aria-hidden="true">↗</span></a>
-
-<script>
-  const cta = document.querySelector<HTMLAnchorElement>('.mobile-cta');
-  const contact = document.querySelector<HTMLElement>('#contact');
-  if (cta && contact) {
-    // Once contact starts entering the viewport, keep CTA hidden through the footer.
-    // Disabled/unsupported JavaScript leaves the sticky CTA hidden by default.
-    let framePending = false;
-    const update = () => {
-      cta.hidden = contact.getBoundingClientRect().top < window.innerHeight;
-      framePending = false;
-    };
-    const schedule = () => {
-      if (!framePending) {
-        framePending = true;
-        requestAnimationFrame(update);
-      }
-    };
-    window.addEventListener('scroll', schedule, { passive: true });
-    window.addEventListener('resize', schedule);
-    window.addEventListener('pageshow', schedule);
-    update();
-  }
-</script>
+<footer>
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top">Connect Marketing</a>
+    <a href="https://note.com/houmeinobusiness" target="_blank" rel="noopener noreferrer">代表のnote ↗</a>
+    <small>© {new Date().getFullYear()} Connect Marketing</small>
+  </div>
+</footer>
