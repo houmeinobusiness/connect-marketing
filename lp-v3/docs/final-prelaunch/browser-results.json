@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "headings": 9,
+      "overflow": false,
+      "robots": "index,follow",
+      "newPolicyTextPresent": true
+    },
+    {
+      "width": 1440,
+      "headings": 9,
+      "overflow": false,
+      "robots": "index,follow",
+      "newPolicyTextPresent": true
+    }
+  ],
+  "tallyPrivacyHref": "https://connect-mkt.jp/privacy/",
+  "emailInputPresent": true,
+  "newSubmissions": 0,
+  "notification": "管理者が受信確認済みと報告。今回エージェントによる受信テストは未実施"
+}

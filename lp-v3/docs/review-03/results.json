@@ -1,0 +1,306 @@
+[
+  {
+    "width": 320,
+    "height": 740,
+    "horizontalOverflow": false,
+    "mobileCtaCount": 0,
+    "bodyPaddingBottom": "0px",
+    "footerPaddingTop": "34px",
+    "footerPaddingBottom": "34px",
+    "robots": "noindex,nofollow",
+    "allFormControlsDisabled": true,
+    "brokenAnchors": [],
+    "externalScripts": 0,
+    "diagram": {
+      "scrollY": 578,
+      "top": 102.015625,
+      "bottom": 467.015625,
+      "fullyVisible": true,
+      "fixedButtonCount": 0,
+      "labelsUncovered": true
+    },
+    "scrollScan": [
+      {
+        "selector": "#top",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#services",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#about",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#process",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#contact",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "footer",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      }
+    ],
+    "consultationLinks": [
+      {
+        "selector": ".header a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": ".hero-actions a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(1) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(2) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(3) a[href=\"#contact\"]",
+        "works": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "mobileCtaCount": 0,
+    "bodyPaddingBottom": "0px",
+    "footerPaddingTop": "34px",
+    "footerPaddingBottom": "34px",
+    "robots": "noindex,nofollow",
+    "allFormControlsDisabled": true,
+    "brokenAnchors": [],
+    "externalScripts": 0,
+    "diagram": {
+      "scrollY": 566,
+      "top": 101.640625,
+      "bottom": 466.640625,
+      "fullyVisible": true,
+      "fixedButtonCount": 0,
+      "labelsUncovered": true
+    },
+    "scrollScan": [
+      {
+        "selector": "#top",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#services",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#about",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#process",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#contact",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "footer",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      }
+    ],
+    "consultationLinks": [
+      {
+        "selector": ".header a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": ".hero-actions a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(1) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(2) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(3) a[href=\"#contact\"]",
+        "works": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "horizontalOverflow": false,
+    "mobileCtaCount": 0,
+    "bodyPaddingBottom": "0px",
+    "footerPaddingTop": "34px",
+    "footerPaddingBottom": "34px",
+    "robots": "noindex,nofollow",
+    "allFormControlsDisabled": true,
+    "brokenAnchors": [],
+    "externalScripts": 0,
+    "diagram": {
+      "scrollY": 573,
+      "top": 123.09375,
+      "bottom": 603.09375,
+      "fullyVisible": true,
+      "fixedButtonCount": 0,
+      "labelsUncovered": true
+    },
+    "scrollScan": [
+      {
+        "selector": "#top",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#services",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#about",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#process",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#contact",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "footer",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      }
+    ],
+    "consultationLinks": [
+      {
+        "selector": ".header a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": ".hero-actions a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(1) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(2) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(3) a[href=\"#contact\"]",
+        "works": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "horizontalOverflow": false,
+    "mobileCtaCount": 0,
+    "bodyPaddingBottom": "0px",
+    "footerPaddingTop": "34px",
+    "footerPaddingBottom": "34px",
+    "robots": "noindex,nofollow",
+    "allFormControlsDisabled": true,
+    "brokenAnchors": [],
+    "externalScripts": 0,
+    "diagram": {
+      "scrollY": 109,
+      "top": 123.25,
+      "bottom": 603.25,
+      "fullyVisible": true,
+      "fixedButtonCount": 0,
+      "labelsUncovered": true
+    },
+    "scrollScan": [
+      {
+        "selector": "#top",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#services",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#about",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#process",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "#contact",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      },
+      {
+        "selector": "footer",
+        "mobileCtaCount": 0,
+        "visibleFixedButtons": 0
+      }
+    ],
+    "consultationLinks": [
+      {
+        "selector": ".header a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": ".hero-actions a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(1) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(2) a[href=\"#contact\"]",
+        "works": true
+      },
+      {
+        "selector": "#services .service:nth-child(3) a[href=\"#contact\"]",
+        "works": true
+      }
+    ],
+    "errors": []
+  }
+]

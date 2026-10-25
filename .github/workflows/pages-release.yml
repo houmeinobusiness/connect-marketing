@@ -1,0 +1,68 @@
+name: Manual Pages release or rollback
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Approved production release or old-site rollback
+        type: choice
+        required: true
+        default: release
+        options: [release, rollback]
+permissions:
+  contents: read
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - if: inputs.operation == 'release'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: lp-v3/package-lock.json
+      - uses: actions/configure-pages@v5
+      - if: inputs.operation == 'release'
+        run: npm ci
+        working-directory: lp-v3
+      - if: inputs.operation == 'release'
+        run: npm run check
+        working-directory: lp-v3
+      - if: inputs.operation == 'release'
+        run: npm run build:production
+        working-directory: lp-v3
+      - if: inputs.operation == 'rollback'
+        run: |
+          sha256sum -c docs/review-08/rollback-site.sha256
+          python -m zipfile -e docs/review-08/rollback-site.zip rollback
+        working-directory: lp-v3
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ inputs.operation == 'rollback' && 'lp-v3/rollback' || 'lp-v3/dist' }}
+          retention-days: 7
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

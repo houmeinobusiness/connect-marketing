@@ -1,0 +1,146 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 1085,
+    "iframeWidth": 254,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 1085,
+      "submitEnabled": true,
+      "privacyLinks": [
+        {
+          "text": "プライバシーポリシー",
+          "href": "https://connect-mkt.jp/privacy/"
+        }
+      ]
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    }
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 1014,
+    "iframeWidth": 324,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 1014,
+      "submitEnabled": true,
+      "privacyLinks": [
+        {
+          "text": "プライバシーポリシー",
+          "href": "https://connect-mkt.jp/privacy/"
+        }
+      ]
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    }
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 1061,
+    "iframeWidth": 294,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 1061,
+      "submitEnabled": true,
+      "privacyLinks": [
+        {
+          "text": "プライバシーポリシー",
+          "href": "https://connect-mkt.jp/privacy/"
+        }
+      ]
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    }
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 924,
+    "iframeWidth": 577,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 924,
+      "submitEnabled": true,
+      "privacyLinks": [
+        {
+          "text": "プライバシーポリシー",
+          "href": "https://connect-mkt.jp/privacy/"
+        }
+      ]
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    }
+  }
+]

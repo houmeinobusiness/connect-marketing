@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "production-site": "2805decdb695ae20bf262c25a7c7a5ca2e1f8d6d73056bb7ebbec17e47bc3c72",
+    "rollback-site": "114f843287d635fc02f772c8baf5d25c0c781c57c2ba46f74d03ffabc941be5a"
+  },
+  "bothArchivesExtractedAndCompared": true,
+  "latestPolicyInBoth": true,
+  "privacyAndCssPresent": true,
+  "mcpExcluded": true,
+  "policyEqualExceptRobots": true,
+  "giftByteIdentical": true
+}

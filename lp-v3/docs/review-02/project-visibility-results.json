@@ -1,0 +1,14 @@
+[
+  {
+    "case": "no-eligible",
+    "worksRendered": false,
+    "unapprovedOrIncompleteExcluded": true,
+    "eligibleClientAndDemoRendered": false
+  },
+  {
+    "case": "eligible",
+    "worksRendered": true,
+    "unapprovedOrIncompleteExcluded": true,
+    "eligibleClientAndDemoRendered": true
+  }
+]

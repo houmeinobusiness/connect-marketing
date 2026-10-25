@@ -1,0 +1,126 @@
+[
+  {
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 1061,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 1061,
+      "submitEnabled": true,
+      "privacyLink": false
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    },
+    "iframeWidth": 254,
+    "viewportWidth": 320
+  },
+  {
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 996,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 996,
+      "submitEnabled": true,
+      "privacyLink": false
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    },
+    "iframeWidth": 324,
+    "viewportWidth": 390
+  },
+  {
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 1037,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 1037,
+      "submitEnabled": true,
+      "privacyLink": false
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    },
+    "iframeWidth": 294,
+    "viewportWidth": 768
+  },
+  {
+    "overflow": false,
+    "iframeCount": 1,
+    "dummyFormCount": 0,
+    "height": 906,
+    "robots": "noindex,nofollow",
+    "privacyLink": true,
+    "fallback": true,
+    "inner": {
+      "overflow": false,
+      "contentHeight": 906,
+      "submitEnabled": true,
+      "privacyLink": false
+    },
+    "contactLinks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "privacy": {
+      "overflow": false,
+      "headings": 9,
+      "robots": "noindex,nofollow",
+      "canonical": "https://connect-mkt.jp/privacy/",
+      "brokenAnchors": 0
+    },
+    "iframeWidth": 577,
+    "viewportWidth": 1440
+  }
+]

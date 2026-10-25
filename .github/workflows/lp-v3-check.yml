@@ -1,0 +1,32 @@
+name: LP v3 build and check
+on:
+  push:
+    branches: [feature/lp-v3]
+    paths: ['lp-v3/**', '.github/workflows/lp-v3-check.yml']
+  pull_request:
+    paths: ['lp-v3/**', '.github/workflows/lp-v3-check.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+    defaults:
+      run:
+        working-directory: lp-v3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: lp-v3/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: npm run build:production
+      - run: npm run build:rollback

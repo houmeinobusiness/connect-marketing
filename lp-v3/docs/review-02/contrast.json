@@ -1,0 +1,86 @@
+[
+  {
+    "foreground": "#173047",
+    "background": "#ffffff",
+    "contrast": 13.55,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#173047",
+    "background": "#f7f9fa",
+    "contrast": 12.83,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#173047",
+    "background": "#eef4f2",
+    "contrast": 12.16,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#247f76",
+    "background": "#ffffff",
+    "contrast": 4.8,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#247f76",
+    "background": "#f7f9fa",
+    "contrast": 4.55,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#ffffff",
+    "background": "#247f76",
+    "contrast": 4.8,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#1c665e",
+    "background": "#eef4f2",
+    "contrast": 6.06,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#1c665e",
+    "background": "#eaf1ef",
+    "contrast": 5.89,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#566573",
+    "background": "#ffffff",
+    "contrast": 5.99,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#566573",
+    "background": "#f7f9fa",
+    "contrast": 5.67,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#566573",
+    "background": "#eef4f2",
+    "contrast": 5.38,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#62717b",
+    "background": "#ffffff",
+    "contrast": 5.04,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#62717b",
+    "background": "#f7f9fa",
+    "contrast": 4.77,
+    "AA_normal": true
+  },
+  {
+    "foreground": "#62717b",
+    "background": "#eef4f2",
+    "contrast": 4.53,
+    "AA_normal": true
+  }
+]

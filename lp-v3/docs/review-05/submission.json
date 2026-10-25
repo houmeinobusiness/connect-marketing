@@ -1,0 +1,24 @@
+{
+  "emailFormatRejected": false,
+  "consentRequired": true,
+  "afterSubmissionText": "フォームが送信されました\nお問い合わせを受け付けました。\n\nConnect Marketingにご相談いただき、ありがとうございます。内容を確認のうえ、\nご入力いただいたメールアドレスへご連絡いたします。\n\nしばらく経っても返信が確認できない場合は、迷惑メールフォルダもご確認ください。\n\n※このフォームの送信をもって、制作・運用などの契約が成立するものではありません。具体的な作業は、対応内容と費用をご案内し、双方で合意したうえで開始しますのでご安心下さい。\n\nTallyで作成",
+  "postResponses": [
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/events",
+      "status": 200
+    },
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/respond",
+      "status": 200
+    },
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/events",
+      "status": 200
+    },
+    {
+      "url": "https://tally.so/api/forms/EqkyYX/events",
+      "status": 200
+    }
+  ],
+  "notificationDelivery": "未検証（管理画面・通知先メール未確認）"
+}

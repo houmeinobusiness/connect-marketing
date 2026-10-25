@@ -1,0 +1,19 @@
+{
+  "testId": "CM-LPV3-06-20261025",
+  "email": "lpv3-review06@example.com",
+  "emptyErrors": 5,
+  "emailError": {
+    "type": "email",
+    "ariaInvalid": "true",
+    "validity": false,
+    "message": "Please include an '@' in the email address. 'not-an-email' is missing an '@'."
+  },
+  "invalidRejected": true,
+  "consentRejected": true,
+  "actualSubmissions": 1,
+  "status": 200,
+  "completed": "フォームが送信されました\nお問い合わせを受け付けました。\n\nConnect Marketingにご相談いただき、ありがとうございます。内容を確認のうえ、\nご入力いただいたメールアドレスへご連絡いたします。\n\nしばらく経っても返信が確認できない場合は、迷惑メールフォルダもご確認ください。\n\n※このフォームの送信をもって、制作・運用などの契約が成立するものではありません。具体的な作業は、対応内容と費用をご案内し、双方で合意したうえで開始しますのでご安心下さい。\n\nTallyで作成",
+  "consentLinksAfterCompletion": [],
+  "notificationDelivery": "管理者確認待ち",
+  "deletion": "管理者側で上記testIdの回答を削除"
+}
