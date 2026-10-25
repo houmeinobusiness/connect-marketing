@@ -1,10 +1,12 @@
 {
   "sha256": {
-    "production-site": "34b607408f94db9010a0fd203f007ecceae35372fe09418f11d22e5056c1bfd9",
-    "rollback-site": "dc1e22f3c327605efc050bea60e8426140701bd9dfb93f008becdb35ee660ec6"
+    "production-site": "2805decdb695ae20bf262c25a7c7a5ca2e1f8d6d73056bb7ebbec17e47bc3c72",
+    "rollback-site": "114f843287d635fc02f772c8baf5d25c0c781c57c2ba46f74d03ffabc941be5a"
   },
-  "rollbackZipExtractedAndCompared": true,
+  "bothArchivesExtractedAndCompared": true,
+  "latestPolicyInBoth": true,
   "privacyAndCssPresent": true,
   "mcpExcluded": true,
+  "policyEqualExceptRobots": true,
   "giftByteIdentical": true
 }
