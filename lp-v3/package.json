@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build && node scripts/preserve-legacy.mjs",
-    "preview": "astro preview --host 0.0.0.0",
-    "check": "astro check"
+    "build": "astro build && node scripts/preserve-legacy.mjs && node scripts/verify-output.mjs preview",
+    "preview": "npm run build && astro preview --host 0.0.0.0",
+    "check": "astro check",
+    "build:production": "astro build --mode release && node scripts/preserve-legacy.mjs && node scripts/verify-output.mjs production",
+    "build:rollback": "node scripts/build-rollback.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.3",

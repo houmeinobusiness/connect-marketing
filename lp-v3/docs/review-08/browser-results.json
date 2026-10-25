@@ -1,0 +1,189 @@
+{
+  "results": [
+    {
+      "mode": "production",
+      "width": 320,
+      "robots": "index,follow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "production",
+      "width": 390,
+      "robots": "index,follow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": 1014,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "production",
+      "width": 768,
+      "robots": "index,follow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "production",
+      "width": 1440,
+      "robots": "index,follow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": 924,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "preview",
+      "width": 320,
+      "robots": "noindex,nofollow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "preview",
+      "width": 390,
+      "robots": "noindex,nofollow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "preview",
+      "width": 768,
+      "robots": "noindex,nofollow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "preview",
+      "width": 1440,
+      "robots": "noindex,nofollow",
+      "links": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "rollback",
+      "width": 320,
+      "robots": "noindex,nofollow",
+      "links": [],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "rollback",
+      "width": 390,
+      "robots": "noindex,nofollow",
+      "links": [],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "rollback",
+      "width": 768,
+      "robots": "noindex,nofollow",
+      "links": [],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    },
+    {
+      "mode": "rollback",
+      "width": 1440,
+      "robots": "noindex,nofollow",
+      "links": [],
+      "formHeight": null,
+      "privacyCssLoaded": true,
+      "privacyHeadings": 9,
+      "englishNoindex": true,
+      "mcpStatus": 404
+    }
+  ],
+  "gift": {
+    "noindex": "noindex, nofollow",
+    "copyWorks": true,
+    "calendarUrl": "https://calendar.app.google/3FHCZLE33e9eiraZ7"
+  }
+}

@@ -1,10 +1,6 @@
 # Connect Marketing LP v3
 
-本番を保護する独立Astroプロジェクト。リポジトリルートの既存トップ・CNAME・公開ファイルは変更しません。作業ブランチは `feature/lp-v3`。本番公開・mainへのマージ・DNS・Pages設定変更は本作業の対象外です。
-
-## 開発
-
-Node.js 22.23.4以上（検証・CIは24）、npmを使用。
+feature/lp-v3内で制作。本番公開・mainマージ・DNS/CNAME/Pages設定変更は未実施。Node.js 22.23.4以上（CI/検証は24）、Astro 7.4.2、Tailwind 4.3.3。
 
 ```sh
 cd lp-v3
@@ -15,42 +11,29 @@ npm run build
 npm run preview
 ```
 
-siteは `https://connect-mkt.jp`、baseは `/`、静的出力は `lp-v3/dist/`。ビルド後、`scripts/preserve-legacy.mjs` が既存 `en/`、`assets/`、`mcp.json` を成果物へコピーします。CNAMEは変更・コピーしません。現行Pagesの配信対象は変更していません。
+通常build/previewはnoindex。previewは起動前にnoindex版を必ず再生成する。本番用は明示的に `npm run build:production`、復旧用生成はその後に `npm run build:rollback`。いずれもローカル生成のみで公開しない。
 
-## ページと表示管理
+site=https://connect-mkt.jp、base=/、成果物dist/。本番用の/と/privacy/のみindex・sitemap収録。改訂enと既存特典は常にnoindex。mcp.jsonはソース保管のみで配信成果物には含めない。root CNAMEは無変更。
 
-- `/`：LP。実績は `src/data/projects.ts` の完成・掲載許諾の両条件を満たすもののみ表示し、0件ならセクションを生成しません。
-- `/privacy/`：提供された正式原稿の9項目を掲載。2026年10月25日制定。
-- プロフィールは `src/data/profile.ts` で編集。未確認の年数・企業名・成果数値は追記しません。
+## 現在のページ・フォーム
+
+- /：新LP。完成・掲載許諾済み実績のみ表示、0件ならセクションなし。プロフィールはsrc/data/profile.tsで編集。
+- /privacy/：提供済み正式原稿9項目。2026年10月25日制定。
+- /en/：現在の3サービスを紹介する暫定英語案内。英語対応の保証はしない。
+- /assets/gifts/8sns-ai-prompt-2026.html：既存のnote向け配布物を内容・URL・noindexごと維持。
+- Tally正式ID EqkyYXをdata-tally-src/公式embed.jsで埋め込み。幅100%・初期900px・dynamicHeight。正式フォームへの代替リンクとprivacyリンクを常時表示。操作は実送信になる。
 - モバイル下部固定CTAは撤去済み。相談導線はヘッダー・FV・サービスカード。
-- 共通レイアウトの `noindex,nofollow` は開発中のため維持。
 
-## Tallyフォーム
+Tallyは制作指示⑥でEmail必須・形式・同意・1件の正常送信を再検証済み。管理者側の通知受信・保存条件・国外処理・委託・スパム対策、通信失敗時UXは未確認。テスト回答CM-LPV3-06-20261025と前回⑤の回答は管理者確認後削除する。公開直後には本番privacyへのリンクと送信/通知を再確認する。
 
-`src/components/ContactForm.astro` で正式ID `EqkyYX` をインライン埋め込み。公式 `data-tally-src` と `widgets/embed.js` を利用し、幅100%、初期高さ900px、dynamicHeight=1。無効ダミーフォームは削除済みです。表示できない場合も `https://tally.so/r/EqkyYX` へのリンクを常時表示します。LPのフォーム操作は実送信になります。
+## 公開準備と復旧
 
-現状の動作確認と画面：[制作指示⑤報告](REVIEW-05.md)。実送信は架空データ1件のみ。通知メール到達は未確認です。
+[最新報告・短い残作業チェック](REVIEW-08.md)、[公開/復旧手順](LAUNCH-RUNBOOK.md)、[旧URL方針](LEGACY-URL-PLAN.md)。
 
-### Tally管理画面の設定状況と確認事項（LPからは変更不可）
+.github/workflows/pages-release.ymlはmainだけからの手動実行。releaseは本番用ビルドを配信、rollbackはSHA256確認済みの保管ZIPを新LP再ビルドなしで配信する。今回はどちらも実行していない。既存check CIは通常/本番/復旧ビルドの検査のみ。
 
-1. 所有アカウントでTallyへログインし、ID `EqkyYX` のフォーム編集画面を開く。
-2. メール欄は管理者がEmail項目へ変更済み。制作指示⑥でtype=email、必須・不正形式拒否と正常送信を再確認した。項目置換に伴う通知テンプレート・連携先の対応は管理者が確認する。
-3. 同意チェック直前の説明に正式URL `https://connect-mkt.jp/privacy/` のリンクが設定されたことを制作指示⑥で確認済み。同意チェックは必須。本番/privacy/の到達確認は公開後に実施する。
-4. 変更をTallyの公開フォームへ反映し、不正メールを拒否すること、未同意を拒否すること、リンクを別タブで開けることを再検証する。
-5. `/privacy/` は現時点で開発ブランチにのみ存在する。本番未公開の間は正式ドメインのリンク先が利用可能とは報告しない。ポリシーページの公開とフォームリンクの有効化時期を合わせる。
-6. 管理画面の通知設定で宛先・返信先・自動返信を確認し、管理者側でテスト通知の到達を確認する。スパム対策・アカウント権限・保管と削除条件も確認する。
-7. 回答一覧から「動作確認用 架空テスト」の回答を確認し、検証終了後に削除する。
+復旧ZIPは旧トップのMCP discovery/紹介ブロック等を除き、現行privacy/CSS・英語案内・特典・正式Tallyリンクを保持。旧ページの残存サービス説明は緊急用のため、長期運用しない。privacyを更新した場合は復旧ZIP・SHA256・表示検証も更新する。
 
-## 公開前の残作業
+公開前に管理者がPages設定とHTTPSを記録し、Environmentをmain限定・承認付きに整備する。実際の公開は別途承認後。正式OGP画像は未実装で、SNS共有前の残作業。権利帰属・予約先・MCP利用者など外部の未確認事項はREVIEW-08.mdを参照。
 
-- Tallyのメール形式・必須・同意・1件の正常送信は制作指示⑥で再確認済み。通信失敗時の案内は要再検証。
-- 通知先・自動返信、スパム対策、保存・削除条件は管理画面と管理者側で確認。
-- 個人情報の国外処理・委託条件・Cookieの実態と必要な対応は未確認。ポリシー原稿に記載された方針と、実運用が一致することを確認する。
-- 正式OGP画像は未実装。画像とog:image等を設定し、SNS表示確認。
-- 正式公開の承認後にrobotsを公開用へ変更し、canonical・OG URL・site・baseを再確認。今回noindexは維持。
-- 既存英語版は旧事業訴求、特典ページは配布済みリンク、mcp.jsonはAPI実稼働・既存利用者を確認し、別途維持・改訂・廃止を判断する。今回元ファイルは変更しない。
-- Pages配信方法・切替・復旧、実端末・複数ブラウザーの検証は公開前に別途実施する。CIは検査・ビルドのみでデプロイ権限なし。
-
-## 公開準備（制作指示⑥）
-
-[再検証結果と必須・公開後対応の区分](REVIEW-06.md)、[GitHub Pages移行・復旧手順](LAUNCH-RUNBOOK.md)、[既存URLの移行提案](LEGACY-URL-PLAN.md)を参照。実行可能な公開workflowは追加しておらず、noindexと既存公開設定は変更していません。
+以前のREVIEW-02/03/05/06は各時点の履歴資料。現行の検索設定・旧URL・workflowはREVIEW-08.mdと本READMEを優先する。
