@@ -1,0 +1,41 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "title": "Connect Marketing｜事業の目的から考えるWeb制作・運用支援",
+    "sections": 6,
+    "overflow": false,
+    "formDisabled": true,
+    "submitDisabled": true,
+    "h1": 1,
+    "brokenAnchors": [],
+    "contactNavigation": true,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "title": "Connect Marketing｜事業の目的から考えるWeb制作・運用支援",
+    "sections": 6,
+    "overflow": false,
+    "formDisabled": true,
+    "submitDisabled": true,
+    "h1": 1,
+    "brokenAnchors": [],
+    "contactNavigation": true,
+    "errors": []
+  },
+  {
+    "name": "small-mobile",
+    "width": 320,
+    "title": "Connect Marketing｜事業の目的から考えるWeb制作・運用支援",
+    "sections": 6,
+    "overflow": false,
+    "formDisabled": true,
+    "submitDisabled": true,
+    "h1": 1,
+    "brokenAnchors": [],
+    "contactNavigation": true,
+    "errors": []
+  }
+]

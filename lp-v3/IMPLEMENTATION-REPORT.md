@@ -48,6 +48,7 @@ SEOは日本語title、description、canonical、OGメタ情報を設定。プ�
 - `lp-v3/scripts/preserve-legacy.mjs`：旧URLをビルド成果物に保持
 - `lp-v3/README.md`：開発・公開前確認
 - `lp-v3/IMPLEMENTATION-REPORT.md`：本報告
+- `lp-v3/docs/`：PC・スマートフォンの画面キャプチャと検証結果JSON
 
 ## 検証結果
 
@@ -59,6 +60,7 @@ SEOは日本語title、description、canonical、OGメタ情報を設定。プ�
 - 旧英語ページ、配布HTML、mcp.jsonはビルド前後のバイト一致を確認。プレビューHTTP応答は各200。
 - 1440px・390px・320pxの全画面キャプチャを作成。主要なPC・スマートフォン画面を目視確認。
 - 自動検査の実行はローカル。GitHub Actionsの実行結果は別途確認が必要。
+- 指定ブランチをGitHubへpush済み。mainへのマージ・本番公開は未実施。
 
 ## 既存URLの移行課題
 
