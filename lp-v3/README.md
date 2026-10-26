@@ -34,7 +34,7 @@ Tallyは制作指示⑥でEmail必須・形式・同意・1件の正常送信を
 
 復旧ZIPは旧トップのMCP discovery/紹介ブロック等を除き、現行privacy/CSS・英語案内・特典・正式Tallyリンクを保持。旧ページの残存サービス説明は緊急用のため、長期運用しない。privacyを更新した場合は復旧ZIP・SHA256・表示検証も更新する。
 
-公開前に管理者がPages設定とHTTPSを記録し、Environmentをmain限定・承認付きに整備する。実際の公開は別途承認後。正式OGP画像は未実装で、SNS共有前の残作業。権利帰属・予約先・MCP利用者など外部の未確認事項はREVIEW-08.mdを参照。
+公開前に管理者がPages設定とHTTPSを記録し、Environmentをmain限定・承認付きに整備する。実際の公開は別途承認後。正式OGP画像を追加済み。本番反映とSNS確認は[OGP設定・反映手順](OGP-RELEASE.md)を参照。権利帰属・予約先・MCP利用者など外部の未確認事項はREVIEW-08.mdを参照。
 
 以前のREVIEW-02/03/05/06は各時点の履歴資料。現行の検索設定・旧URL・workflowはREVIEW-08.mdと本READMEを優先する。
 

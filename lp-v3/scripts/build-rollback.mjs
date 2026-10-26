@@ -19,7 +19,7 @@ html=html.replace('</head>','<meta name="robots" content="noindex,nofollow"></he
  .replace('</footer>','<p style="padding:20px;text-align:center"><a href="/privacy/">プライバシーポリシー</a> · <a href="https://tally.so/r/EqkyYX">正式お問い合わせフォーム</a></p></footer>');
 assert(!/mcp-server|mcp\.json|WebMCP Protocol Active/i.test(html));
 await writeFile(`${output}/index.html`,html);
-for(const name of ['privacy','_astro','favicon.svg','en','assets'])await cp(`${release}/${name}`,`${output}/${name}`,{recursive:true});
+for(const name of ['privacy','_astro','favicon.svg','ogp.png','en','assets'])await cp(`${release}/${name}`,`${output}/${name}`,{recursive:true});
 await writeFile(`${output}/privacy/index.html`,privacy.replace('content="index,follow"','content="noindex,nofollow"'));
 await writeFile(`${output}/robots.txt`,'User-agent: *\nDisallow: /\n');
 await writeFile(`${output}/sitemap.xml`,'<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
