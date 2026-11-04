@@ -1,0 +1,54 @@
+---
+interface Props {
+  sectionNumber: string;
+}
+const { sectionNumber } = Astro.props;
+const faqs = [
+  {
+    question: '既存のLPやWebページの改善だけでも相談できますか？',
+    answer: 'はい。新規制作だけでなく、既存ページの構成・デザイン、問い合わせや応募につながる導線の改善についてもご相談いただけます。現状と目的を伺い、必要な改善内容をご提案します。',
+  },
+  {
+    question: '採用向けのLP制作にも対応していますか？',
+    answer: 'はい。集客だけでなく、採用を目的としたLP・Webページの制作や改善もご相談いただけます。募集内容や応募者に伝えたい情報を整理し、応募につながるページと導線を考えます。',
+  },
+  {
+    question: 'LP制作とWeb広告の運用をまとめて相談できますか？',
+    answer: 'はい。LP制作・改善とMeta・Google広告の運用支援を、事業の目的に合わせてご相談いただけます。広告とLPのメッセージや導線を整理し、必要な支援内容をご提案します。',
+  },
+  {
+    question: 'メール施策や業務自動化も相談できますか？',
+    answer: 'はい。メール配信・MAの設計や設定、問い合わせ後の対応フロー、ツール連携、定型業務の自動化などに対応しています。利用環境や業務内容によって実装方法が異なるため、具体的な対応範囲は個別に確認します。',
+  },
+  {
+    question: '制作・実装後の運用や改善もお願いできますか？',
+    answer: 'はい。制作・実装案件では、今後の改善につながる「次の一手メモ」をお渡しします。継続的な運用・改善もご相談いただけますが、継続契約は必須ではありません。追加支援は別途合意・お見積もりのうえ対応します。',
+  },
+  {
+    question: '相談や見積もりはどのように進みますか？',
+    answer: 'まずはお問い合わせフォームから、ご相談内容をお知らせください。目的や現状を伺ったうえで、必要な業務・進め方・費用をご提案します。対応範囲を確認し、合意してから業務を開始します。まだ課題が整理できていない段階でもご相談いただけます。',
+  },
+];
+---
+<section id="faq" class="section faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{sectionNumber} / FAQ</p>
+        <h2 id="faq-heading">ご相談前の疑問にお答えします。</h2>
+      </div>
+      <p>制作・運用・改善について、ご相談前に確認したい内容をまとめました。</p>
+    </div>
+    <div class="faq-list">
+      {faqs.map(({ question, answer }, index) => (
+        <details class="faq-item">
+          <summary>
+            <span class="faq-number" aria-hidden="true">Q{index + 1}.</span>
+            <h3>{question}</h3>
+          </summary>
+          <p class="faq-answer">{answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
