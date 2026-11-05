@@ -96,6 +96,12 @@ input:disabled,textarea:disabled,select:disabled{opacity:1;-webkit-text-fill-col
 .privacy-page ul{list-style:disc;padding-left:1.5em}.privacy-page ol{list-style:decimal;padding-left:1.5em}.privacy-page li{margin-block:6px}
 @media(max-width:767px){.tally-form{padding:12px}.privacy-page{padding-block:45px}.privacy-page h1{font-size:25px}}
 
+.consultation-example{border-top:2px solid #247f76;padding-top:22px}
+.consultation-example h3{font-size:18px;font-weight:700;line-height:1.8;margin-bottom:14px}
+.consultation-example p{font-size:15px;line-height:2;color:#566573;margin-bottom:0}
+.consultation-examples .text-link{margin-top:22px}
+.footer-inner{flex-wrap:wrap}
+
 /* Native details/summary keeps every answer in the generated HTML, without JS. */
 .faq{border-top:1px solid #e0e8e5;background:#fff}
 .faq .section-heading h2{text-wrap:balance}
