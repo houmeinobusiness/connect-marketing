@@ -1,0 +1,42 @@
+{
+  "externalRequests": "blocked; no form submission",
+  "javascriptDisabledCheck": "passed",
+  "viewports": [
+    {
+      "width": 320,
+      "horizontalOverflow": false,
+      "faqOpen": 6,
+      "contactAnchor": true,
+      "tallyFallback": true,
+      "structuredData": true,
+      "privacy": true
+    },
+    {
+      "width": 390,
+      "horizontalOverflow": false,
+      "faqOpen": 6,
+      "contactAnchor": true,
+      "tallyFallback": true,
+      "structuredData": true,
+      "privacy": true
+    },
+    {
+      "width": 768,
+      "horizontalOverflow": false,
+      "faqOpen": 6,
+      "contactAnchor": true,
+      "tallyFallback": true,
+      "structuredData": true,
+      "privacy": true
+    },
+    {
+      "width": 1440,
+      "horizontalOverflow": false,
+      "faqOpen": 6,
+      "contactAnchor": true,
+      "tallyFallback": true,
+      "structuredData": true,
+      "privacy": true
+    }
+  ]
+}
