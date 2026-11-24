@@ -3,7 +3,7 @@ import '../styles/global.css';
 import { isPublicBuild } from '../lib/indexing';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title = 'Connect Marketing｜事業の目的から考えるWeb制作・運用支援', description = 'LP制作・改善からMeta・Google広告の運用、メール・MA・業務自動化まで。小規模事業者・中小企業の集客と採用を、企画から実務までサポートします。' } = Astro.props;
+const { title = 'Connect Marketing｜事業の目的から考えるWeb制作・運用支援', description = 'LP制作・改善から広告・集客支援、メール・MA・業務自動化まで。作って終わりにせず、現場につないで回し続ける。小規模事業者・中小企業の集客と採用を、企画から実務までサポートします。' } = Astro.props;
 
 // Only the home page identifies the organization and website.
 const structuredData = Astro.url.pathname === '/' ? {
