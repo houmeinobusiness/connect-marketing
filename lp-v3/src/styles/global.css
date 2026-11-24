@@ -122,3 +122,12 @@ input:disabled,textarea:disabled,select:disabled{opacity:1;-webkit-text-fill-col
   .faq-item summary h3{font-size:16px}
   .faq-answer{margin:0 2px 24px;font-size:15px}
 }
+.hero-lead{font-size:17px;font-weight:700;color:#173047;letter-spacing:-.3px;margin-bottom:10px}
+.stance-inner{max-width:780px}
+.stance h2{margin-bottom:26px}
+.stance p:not(.eyebrow){font-size:15px;line-height:2;color:#566573;margin-bottom:18px}
+.ai-band{background:#173047;color:#fff}
+.ai-band .eyebrow{color:#7fc4ba}
+.ai-band h2{color:#fff;margin-bottom:26px}
+.ai-band p:not(.eyebrow){font-size:15px;line-height:2;color:#c9d8dd;margin-bottom:18px;max-width:780px}
+@media(max-width:767px){.hero-lead{font-size:15px}}
